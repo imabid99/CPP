@@ -4,9 +4,8 @@ CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
 
-SRCS =  contact.cpp \
-		main.cpp \
-		phonebook.cpp \
+SRCS =  tests.cpp \
+		Account.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 

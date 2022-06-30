@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 14:11:27 by imabid            #+#    #+#             */
-/*   Updated: 2022/05/20 17:15:49 by imabid           ###   ########.fr       */
+/*   Updated: 2022/06/27 17:39:55 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int main()
 {
 	std::string cmd;
 	Phonebook ph_b;
+	
 	phb_des();
 	go_first();
 	while(1)
