@@ -31,11 +31,19 @@ void    Phonebook::print_contact()
 			std::cout << std::string(61, '-') << std::endl;
 }
 
+int	no_par(Contact *contact,int i)
+{
+	if(contact[i].r_fistname() != "" && contact[i].r_lastname()  != "" && contact[i].r_nickname() != ""
+	&& contact[i].r_phonenumber() != ""
+	&& contact[i].r_darkestsecret() != "")
+		return 1;
+	return 0;
+}
 void    Phonebook::add_contact()
 {
 	static int i = 0;
 	contact[i].new_contact();
-	if (contact[i].r_fistname() != "")
+	if (no_par(contact,i))
 	{
 		if(nbr_contact < 8)
 			nbr_contact++;
