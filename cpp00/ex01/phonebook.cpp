@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 11:14:26 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/02 11:14:27 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/02 15:34:32 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,8 @@ void   Phonebook::index_print()
 	int index = 0;
 
 	std::cout << std::endl << "Enter what index you need : ";
-	getline(std::cin,id);
+	if(!getline(std::cin,id))
+		return ;
 	if(is_number(id))
 		index = stoi(id);
 	index--;
