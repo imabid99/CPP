@@ -1,7 +1,7 @@
 NAME = Phonebook
 
 CC = c++
-CC_FLAGS = -Wall -Wextra -Werror -std=c++98
+CC_FLAGS = -Wall -Wextra -Werror -std=c++98 -g
 RM = rm -f
 
 SRCS =  contact.cpp \
@@ -9,8 +9,9 @@ SRCS =  contact.cpp \
 		phonebook.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
+INL = contact.hpp phonebook.hpp
 
-%.o: %.cpp
+%.o: %.cpp $(INL)
 	$(CC) $(CC_FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)

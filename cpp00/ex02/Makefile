@@ -1,4 +1,4 @@
-NAME = Phonebook
+NAME = account
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
@@ -8,8 +8,9 @@ SRCS =  tests.cpp \
 		Account.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
+INL = Account.hpp
 
-%.o: %.cpp
+%.o: %.cpp $(INL)
 	$(CC) $(CC_FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)

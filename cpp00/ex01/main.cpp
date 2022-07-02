@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 14:11:27 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/01 12:09:49 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/02 11:12:48 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,6 @@ int main()
 			std::cout << "Exit the phonebook" << std::endl;
 			break;
 		}
-		// else
-		// {
-		// 	std::cout <<  "Invalid command" << std::endl;
-		// 	go_first();
-		// }
 	};
+	return 0;
 }
