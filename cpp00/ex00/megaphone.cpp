@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 13:21:13 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/02 10:47:27 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/02 15:47:01 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ int main(int ac,char **av)
                 std::cout << av[i][j];
                 j++;
             }
-            if(av[i + 1] != '\0')
-                std::cout << " ";
         }
         std::cout << std::endl;
     }
