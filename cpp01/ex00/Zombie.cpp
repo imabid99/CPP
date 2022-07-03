@@ -3,13 +3,14 @@
 
 Zombie::Zombie(std::string)
 {
+    // announce()
     std::cout << "hello" << std::endl;
 }
 Zombie::~Zombie()
 {
-    std::cout << "Destroyed" << name << std::endl;
+    std::cout << name << "Destroyed" << std::endl;
 }
 void Zombie::announce()
 {
-    std::cout << "im here" << std::endl;
+    std::cout << name << ": " << std::endl;
 }

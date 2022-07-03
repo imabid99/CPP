@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 18:42:01 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/03 15:52:39 by imabid           ###   ########.fr       */
+/*   Created: 2022/07/03 17:00:55 by imabid            #+#    #+#             */
+/*   Updated: 2022/07/03 17:14:03 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Zombie.hpp"
+#include "Zombie.cpp"
 
-int main()
+Zombie* zombieHorde( int N, std::string name )
 {
-    Zombie  *Zom = newZombie("heapZombie");
-    // std::cout << name << s  td::endl;
-    delete Zom;
-    // Zom.announce(); 
+    Zombie *Zom = new Zombie[N];
+    int i = -1;
+    while(++i < N)
+    {
+        Zom[i].nameit(name);
+        Zom[i].announce();
+    }
+    return Zom;
 }
