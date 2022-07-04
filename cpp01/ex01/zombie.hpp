@@ -6,12 +6,12 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 17:04:43 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/03 17:16:37 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/04 12:49:45 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE
-#define ZOMBIE
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
 #include <iostream>
 
