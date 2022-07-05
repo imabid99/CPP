@@ -6,11 +6,14 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:47:01 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/04 12:47:40 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/05 18:25:06 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include  <iostream>
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {

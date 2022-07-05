@@ -6,12 +6,13 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:47:59 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/04 13:07:18 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/05 18:25:34 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
+#include <iostream>
 
 class Weapon
 {
@@ -22,6 +23,6 @@ class Weapon
     ~Weapon();
     std::string getType();
     void    setType(std::string n_type);
-}
+};
 
 #endif
