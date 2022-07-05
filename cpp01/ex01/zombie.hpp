@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 17:04:43 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/04 12:49:45 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/05 10:05:15 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class   Zombie
     public:
     void announce();
     void nameit(std::string name);
-    // Zombie();
-    // ~Zombie();
+    Zombie();
+    ~Zombie();
 };
 
 Zombie* zombieHorde( int N, std::string name );

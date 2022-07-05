@@ -6,10 +6,11 @@ RM = rm -f
 
 SRCS =  main.cpp \
 		Zombie.cpp \
-		newZombie.cpp
+		newZombie.cpp \
+		randomChump.cpp
 
 OBJS = $(SRCS:.cpp=.o)
-INL = Account.hpp
+INL = Zombie.hpp
 
 %.o: %.cpp $(INL)
 	$(CC) $(CC_FLAGS) -c $< -o $@

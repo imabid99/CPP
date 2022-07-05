@@ -43,20 +43,69 @@
 //     Student k;
 // }
 
-class Dual
-{
-    public:
-    int a;
-    Dual(int x)
-    {
-        a = x;
-        std::cout << a << std::endl;
-    }
-};
+// class Dual
+// {
+//     public:
+//     int a;
+//     Dual(int x)
+//     {
+//         a = x;
+//         std::cout << a << std::endl;
+//     }
+// };
+
+// int main()
+// {
+//     Dual obj1;
+//     // Dual obj2(10);
+// }
+// class Abc
+// {
+//     int i;
+//     public:
+//     Abc()
+//     {
+//         i=0;
+//         std::cout << "constructor";
+//     }
+//     ~Abc()
+//     {
+//         std::cout << "destructor";
+//     }
+// };
+
+// void f()
+// {
+//     static Abc obj;
+// }
+
+// int main()
+// {
+//     int x=0;
+//     if(x<5)
+//     {
+//         f();
+//     x++;
+//     }
+//     std::cout << "END";
+// }
+// class X
+// {
+//     public:
+//     static void f()
+//     {
+//         // statement
+//         std::cout << "hello world";
+//     }
+// };
 
 int main()
 {
-    Dual obj1;
-    // Dual obj2(10);
+    // X::f();   // calling member function directly with class name
+    int x = 5;
+    int &k = x;
+    int y = 10;
+    k = y;
+    std::cout << ++x;
 }
 

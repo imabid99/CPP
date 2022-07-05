@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 13:09:14 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/04 13:09:17 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/05 10:55:56 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ class HumanA
     void    attack();
     HumanA(std::string n_name, Weapon &w_c);
     ~HumanA();
-    
-    
 }
 
 #endif

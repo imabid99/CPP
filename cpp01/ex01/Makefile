@@ -6,12 +6,10 @@ RM = rm -f
 
 SRCS =  main.cpp \
 		Zombie.cpp \
-		ZombieHorde.cpp
 
 OBJS = $(SRCS:.cpp=.o)
-INL = Account.hpp
 
-%.o: %.cpp $(INL)
+%.o: %.cpp 
 	$(CC) $(CC_FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
