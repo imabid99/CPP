@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:30:09 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/16 14:46:30 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/16 19:58:56 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 Harl::Harl()
 {
-    std::cout << "hello" <<std::endl;
-    info();
-    debug();
 }
 Harl::~Harl()
 {
-    std::cout << "WORLD" <<std::endl;
 }
 
 void Harl::info(void)
@@ -38,4 +34,22 @@ void Harl::warning(void)
 void Harl::error(void)
 {
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
+}
+void    Harl::complain(std::string level)
+{
+    int i = 0;
+    typedef void (Harl::*HARLPTR)();
+    HARLPTR harl[4] = {
+        &Harl::info,
+        &Harl::warning,
+        &Harl::error,
+        &Harl::debug
+    };
+    std::string levels[4] = {"INFO","WARNING","ERROR","DEBUG"};
+    for(i = 0; i < 4; i++)
+        if (level.compare(levels[i]) == 0)
+        {
+            (this->*(harl[i]))();
+            break ;
+        }
 }
