@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 13:42:24 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/16 14:13:51 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/17 15:36:47 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ class Harl
     public:
     Harl();
     ~Harl();
+    typedef void (Harl::*HARLPTR)();
     void complain( std::string level );
-}
+};
+#endif

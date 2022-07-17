@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:31:28 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/16 19:56:05 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/17 13:30:07 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,8 @@ int main(int ac,char **av)
 {
     (void)ac;
     Harl hh;
-    hh.complain(av[1]);
+    if(ac != 2)
+        std::cout << "ERROR : Args";
+    else
+        hh.complain(av[1]);
 }
