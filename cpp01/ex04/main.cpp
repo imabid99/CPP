@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 20:05:21 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/16 13:34:23 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/17 16:25:43 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 int main(int ac,char **av)
 {
-    
+    std::string filename;
+    std::string s1;
+    std::string s2;
+
+
+    filename = av[1];
+    s1 = av[2];
+    s2 = av[3];
 }
