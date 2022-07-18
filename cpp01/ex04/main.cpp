@@ -6,24 +6,24 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 20:05:21 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/17 18:23:06 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/18 15:45:02 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <iostream>
 #include <fstream>
 
 int main(int ac,char **av)
 {
-    (void)ac;
     std::string filename;
     std::string nfilename;
-    
     std::string s1;
     std::string s2;
-    std::string line;
     std::ifstream min;
     std::ofstream ila;
+    std::string stt;
+    std::string save;
 
 
     if(ac != 4)
@@ -35,7 +35,6 @@ int main(int ac,char **av)
     s1 = av[2];
     s2 = av[3];
     nfilename = filename.append(".replace");
-    // printf("%s",nfilename);
     min.open(av[1]);
     if(min.fail())
     {
@@ -48,20 +47,18 @@ int main(int ac,char **av)
         std::cout << "file cannot be opened." << std::endl;
         return 1;
     }   
-    // std::cout << nfilename << std::endl;
-    // min.open("hhh");
-    // min << "u can" << std::endl;
-    // min << "u can" << std::endl;
- 
-    // while(min >> line)
-    // min >> line;
-    // std::cout << line << std::endl;
-    // printf("hahaha");
-    // std::cout << min << std::endl;
-    while(getline(min,line))
+    while(getline(min,stt))
     {
-        ila << line << std::endl;
+        save += stt;
+        save += '\n';   
     }
+    int p = 0;
+    while((p = save.find(s1)) != - 1)
+    {      
+        save.erase(p, s1.length());
+        save.insert(p,s2);
+    }
+    ila << save;
     min.close();
     ila.close();
     return 0;
