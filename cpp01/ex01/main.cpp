@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 16:55:20 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/18 19:46:57 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/18 19:59:46 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ Zombie* zombieHorde( int N, std::string name )
 
 int main()
 {
-    int N = 8;
-    Zombie *Zom = zombieHorde(N,"Yoyo");
+    int N = 6;
+    Zombie *Zom = zombieHorde(N,"Zombie");
     
     delete [] Zom;
     return 0;  
