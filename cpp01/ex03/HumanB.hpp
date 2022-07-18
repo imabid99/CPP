@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:59:23 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/05 19:20:22 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/18 19:48:33 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 
 class HumanB
 {
-  private:
+    private:
     std::string name;
     Weapon *w;
-  public:
+    public:
     void    attack();
     void    setWeapon(Weapon &w_c);
     HumanB(std::string n_name);

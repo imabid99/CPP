@@ -6,11 +6,10 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/03 16:55:20 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/05 10:55:42 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/18 19:46:57 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <iostream>
 #include "Zombie.hpp"
 
 Zombie* zombieHorde( int N, std::string name )
