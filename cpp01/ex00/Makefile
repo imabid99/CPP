@@ -3,6 +3,7 @@ NAME = Zombie
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
+INL = Zombie.hpp
 
 SRCS =  main.cpp \
 		Zombie.cpp \
@@ -10,7 +11,6 @@ SRCS =  main.cpp \
 		randomChump.cpp
 
 OBJS = $(SRCS:.cpp=.o)
-INL = Zombie.hpp
 
 %.o: %.cpp $(INL)
 	$(CC) $(CC_FLAGS) -c $< -o $@

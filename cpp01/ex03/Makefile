@@ -3,6 +3,7 @@ NAME = weapon
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
+INL = Weapon.hpp HumanA.hpp HumanB.hpp
 
 SRCS = main.cpp \
 	   HumanA.cpp \
@@ -11,7 +12,7 @@ SRCS = main.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
-%.o: %.cpp
+%.o: %.cpp $(INL)
 	$(CC) $(CC_FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)

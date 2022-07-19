@@ -3,13 +3,14 @@ NAME = harlFilter
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
+INL = Harl.hpp
 
 SRCS = main.cpp \
 		Harl.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
-%.o: %.cpp
+%.o: %.cpp $(INL)
 	$(CC) $(CC_FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
