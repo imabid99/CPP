@@ -99,13 +99,27 @@
 //     }
 // };
 
+class A{
+    private:
+    std::string ty;
+    public:
+    A(std::string &a){
+        ty = a;
+        std::cout << ty << std::endl;
+    };
+    ~A(){};
+
+
+};
 int main()
 {
     // X::f();   // calling member function directly with class name
-    int x = 5;
-    int &k = x;
-    int y = 10;
-    k = y;
-    std::cout << ++x;
+    // int x = 5;
+    // int &k = x;
+    // int y = 10;
+    // k = y;
+    // std::cout << ++x;
+    std::string b = "hello";
+    A u(b);
 }
 

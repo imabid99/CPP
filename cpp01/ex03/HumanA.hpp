@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 13:09:14 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/19 09:40:32 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/19 11:59:23 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class HumanA
 {
     private:
     std::string name;
-    Weapon *weapon;
+    Weapon &weapon;
     public:
     void    attack();
     HumanA(std::string n_name, Weapon &w_c);
