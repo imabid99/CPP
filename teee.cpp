@@ -99,27 +99,59 @@
 //     }
 // };
 
-class A{
+// why we work with reference and pointer
+// class A{
+//     private:
+//     std::string ty;
+//     public:
+//     A(std::string &a){
+//         ty = a;
+//         std::cout << ty << std::endl;
+//     };
+//     ~A(){};
+
+
+// };
+// int main()
+// {
+//     // X::f();   // calling member function directly with class name
+//     // int x = 5;
+//     // int &k = x;
+//     // int y = 10;
+//     // k = y;
+//     // std::cout << ++x;
+//     std::string b = "hello";
+//     A u(b);
+// }
+
+
+// default constructor
+//  NB : the constructor included with the compiler is not initialaz 
+//         the member attribute its only using to allocate memory that is why
+//         after allcation memory they are getting the garbage value 
+//         mn a7ssen create our DEFAULT constructor, So that we can initialize member variables 
+//         with some known values
+class AB{
     private:
-    std::string ty;
+    int age;
+    int height;
+    std::string name;
     public:
-    A(std::string &a){
-        ty = a;
-        std::cout << ty << std::endl;
-    };
-    ~A(){};
-
-
+    AB(): age(20){
+        name = "imad";
+        // age = 20;
+        height = 20;
+    }
+    void    getData()
+    {
+        std::cout << "name " << name << std::endl;
+        std::cout << "age " << age << std::endl;
+        std::cout << "height " << height << std::endl;
+    }
 };
 int main()
 {
-    // X::f();   // calling member function directly with class name
-    // int x = 5;
-    // int &k = x;
-    // int y = 10;
-    // k = y;
-    // std::cout << ++x;
-    std::string b = "hello";
-    A u(b);
+    AB a;
+    a.getData();
+    return 0;
 }
-
