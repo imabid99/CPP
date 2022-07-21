@@ -131,27 +131,110 @@
 //         after allcation memory they are getting the garbage value 
 //         mn a7ssen create our DEFAULT constructor, So that we can initialize member variables 
 //         with some known values
+// class AB{
+//     private:
+//     int age;
+//     int height;
+//     std::string name;
+//     public:
+//     AB(){
+//         this->age = 20;
+//         this->name = "imad";
+//         // age = 20;
+//         this->height = 20;
+//     }
+//     AB(std::string name,int age,int height)
+//     {
+//         this->name = name;
+//         this->age = age;
+//         this->height = height; 
+//     }
+//     void    getData()
+//     {
+//         std::cout << "name " << this->name << std::endl;
+//         std::cout << "age " << this->age << std::endl;
+//         std::cout << "height " << this->height << std::endl;
+//     }
+// };
+// int main()
+// {
+//     AB a,b("abid",80,80);
+//     a.getData();
+//     b.getData();
+//     return 0;
+// }
+
+// COPY constructor
+
+
+// EXEMPLE1
+// class BA{
+//     private:
+//     int age;
+//     std::string name;
+//     public:
+//     BA(int x)
+//     {
+//         age = x;
+//     }
+//     BA( BA &obj1)
+//     {
+//         age = obj1.age;
+//     }
+//     int getData()
+//     {
+//         return age;
+//     }
+// };
+// int main()
+// {
+//     BA obj1(100);
+//     BA obj2(obj1);
+//     std::cout << obj2.getData() <<std::endl;
+//     return 0;
+// }
+// EXEMPLE2
 class AB{
     private:
     int age;
     int height;
     std::string name;
     public:
-    AB(): age(20){
-        name = "imad";
-        // age = 20;
-        height = 20;
+    AB(){
+        this->age = 20;
+        this->name = "imad";
+        this->height = 20;
     }
+    AB(std::string name,int age,int height)
+    {
+        this->name = name;
+        this->age = age;
+        this->height = height; 
+    }
+    AB(AB &b)
+    {
+        this->name = b.name;
+        this->age = b.age;
+        this->height = b.height; 
+    }
+    // AB(AB &c)
+    // {
+    //     this->name = c.name;
+    //     this->age = c.age;
+    //     this->height = c.height; 
+    // }
     void    getData()
     {
-        std::cout << "name " << name << std::endl;
-        std::cout << "age " << age << std::endl;
-        std::cout << "height " << height << std::endl;
+        std::cout << "name " << this->name << std::endl;
+        std::cout << "age " << this->age << std::endl;
+        std::cout << "height " << this->height << std::endl;
     }
 };
 int main()
 {
-    AB a;
+    AB a,b("abid",80,80),c(b) /*or c = b*/;
     a.getData();
+    b.getData();
+    c.getData();
     return 0;
 }
