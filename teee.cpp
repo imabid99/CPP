@@ -194,47 +194,47 @@
 //     return 0;
 // }
 // EXEMPLE2
-class AB{
-    private:
-    int age;
-    int height;
-    std::string name;
-    public:
-    AB(){
-        this->age = 20;
-        this->name = "imad";
-        this->height = 20;
-    }
-    AB(std::string name,int age,int height)
-    {
-        this->name = name;
-        this->age = age;
-        this->height = height; 
-    }
-    AB(AB &b)
-    {
-        this->name = b.name;
-        this->age = b.age;
-        this->height = b.height; 
-    }
-    // AB(AB &c)
-    // {
-    //     this->name = c.name;
-    //     this->age = c.age;
-    //     this->height = c.height; 
-    // }
-    void    getData()
-    {
-        std::cout << "name " << this->name << std::endl;
-        std::cout << "age " << this->age << std::endl;
-        std::cout << "height " << this->height << std::endl;
-    }
-};
-int main()
-{
-    AB a,b("abid",80,80),c(b) /*or c = b*/;
-    a.getData();
-    b.getData();
-    c.getData();
-    return 0;
-}
+// class AB{
+//     private:
+//     int age;
+//     int height;
+//     std::string name;
+//     public:
+//     AB(){
+//         this->age = 20;
+//         this->name = "imad";
+//         this->height = 20;
+//     }
+//     AB(std::string name,int age,int height)
+//     {
+//         this->name = name;
+//         this->age = age;
+//         this->height = height; 
+//     }
+//     AB(AB &b)
+//     {
+//         this->name = b.name;
+//         this->age = b.age;
+//         this->height = b.height; 
+//     }
+//     // AB(AB &c)
+//     // {
+//     //     this->name = c.name;
+//     //     this->age = c.age;
+//     //     this->height = c.height; 
+//     // }
+//     void    getData()
+//     {
+//         std::cout << "name " << this->name << std::endl;
+//         std::cout << "age " << this->age << std::endl;
+//         std::cout << "height " << this->height << std::endl;
+//     }
+// };
+// int main()
+// {
+//     AB a,b("abid",80,80),c(b) /*or c = b*/;
+//     a.getData();
+//     b.getData();
+//     c.getData();
+//     return 0;
+// }
