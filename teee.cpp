@@ -194,47 +194,81 @@
 //     return 0;
 // }
 // EXEMPLE2
-class AB{
-    private:
-    int age;
-    int height;
-    std::string name;
-    public:
-    AB(){
-        this->age = 20;
-        this->name = "imad";
-        this->height = 20;
-    }
-    AB(std::string name,int age,int height)
+// class AB{
+//     private:
+//     int age;
+//     int height;
+//     std::string name;
+//     public:
+//     AB(){
+//         this->age = 20;
+//         this->name = "imad";
+//         this->height = 20;
+//     }
+//     AB(std::string name,int age,int height)
+//     {
+//         this->name = name;
+//         this->age = age;
+//         this->height = height; 
+//     }
+//     AB(AB &other)
+//     {
+//         this->name = other.name;
+//         this->age = other.age;
+//         this->height = other.height; 
+//     }
+//     // AB(AB &c)
+//     // {
+//     //     this->name = c.name;
+//     //     this->age = c.age;
+//     //     this->height = c.height; 
+//     // }
+//     void    getData()
+//     {
+//         std::cout << "name " << this->name << std::endl;
+//         std::cout << "age " << this->age << std::endl;
+//         std::cout << "height " << this->height << std::endl;
+//     }
+// };
+// int main()
+// {
+//     AB a,b("abid",80,80),c(b) ,d(c)/*or c = b*/;
+//     a.getData();
+//     b.getData();
+//     c.getData();
+//     d.getData();
+//     return 0;
+// }
+// EXEMPLE3: special
+
+class Vec
+{
+private:
+    int * vec;
+    int size;
+public:
+	Vec (int size = 10)
     {
-        this->name = name;
-        this->age = age;
-        this->height = height; 
-    }
-    AB(AB &b)
-    {
-        this->name = b.name;
-        this->age = b.age;
-        this->height = b.height; 
-    }
-    // AB(AB &c)
-    // {
-    //     this->name = c.name;
-    //     this->age = c.age;
-    //     this->height = c.height; 
-    // }
-    void    getData()
-    {
-        std::cout << "name " << this->name << std::endl;
-        std::cout << "age " << this->age << std::endl;
-        std::cout << "height " << this->height << std::endl;
-    }
+		this->size = size;  
+		this->vec = new int [size];
+	}
+	Vec (const Vec & other)
+	{
+		std::cout << "copy constructor" << std::endl;
+		this->size = other.size;
+		this->vec = new int [this->size];
+		for (int i = 0; i < this->size; ++i)
+		{
+			this->vec[i] = other.vec[i];
+		}
+	}
+	~Vec () 
+	{
+		delete [] this->vec;
+	}
 };
 int main()
 {
-    AB a,b("abid",80,80),c(b) /*or c = b*/;
-    a.getData();
-    b.getData();
-    c.getData();
-    return 0;
+    Vec a (5);
+    Vec b (a); // or Vector b = a;
 }
