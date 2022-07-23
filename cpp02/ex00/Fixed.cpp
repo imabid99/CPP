@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 14:21:28 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/23 11:47:55 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/23 14:41:34 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,16 @@ Fixed::Fixed(const Fixed &other)
     std::cout << "Copy constructor called" << std::endl;
     this->fix_p = other.getRawBits();
 }
-// Fixed::Fixed
+
+Fixed &Fixed::operator=(const Fixed &other)
+{
+    std::cout << "Copy assignment operator called" << std::endl;
+    if(this != &other)
+        this->fix_p = other.getRawBits();
+    return *this;
+    
+}
+
 int Fixed::getRawBits(void) const
 {
     std::cout << "getRawBits member function called" << std::endl;

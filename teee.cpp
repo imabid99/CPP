@@ -252,16 +252,16 @@ public:
 		this->size = size;  
 		this->vec = new int [size];
 	}
-	Vec (const Vec & other)
-	{
-		std::cout << "copy constructor" << std::endl;
-		this->size = other.size;
-		this->vec = new int [this->size];
-		for (int i = 0; i < this->size; ++i)
-		{
-			this->vec[i] = other.vec[i];
-		}
-	}
+	// Vec (const Vec & other)
+	// {
+	// 	std::cout << "copy constructor" << std::endl;
+	// 	this->size = other.size;
+	// 	this->vec = new int [this->size];
+	// 	for (int i = 0; i < this->size; ++i)
+	// 	{
+	// 		this->vec[i] = other.vec[i];
+	// 	}
+	// }
 	~Vec () 
 	{
 		delete [] this->vec;
@@ -270,5 +270,53 @@ public:
 int main()
 {
     Vec a (5);
-    Vec b (a); // or Vector b = a;
+    Vec b (10); // or Vector b = a;
+	a = b; // translates to a.operator = (b);
 }
+
+// copy constructor and assignment operator are 
+// similar as they are both used to initailize one 
+// object using another object 
+
+// Test t1, t2;
+// t2 = t1;
+// Test t3 = t1;
+// Explanation: Here, t2 = t1;  calls the assignment operator, same as t2.operator=(t1); and  
+// Test t3 = t1;  calls the copy constructor, same as Test t3(t1);
+
+
+// This pointer
+// #include <iostream>
+// struct test {
+//   int x;
+//   test() : x() {}
+//   test& foo() { return *this; }
+//   test bar() { return *this; }
+//   void set( int value ) { x = value; }
+// };
+// int main() {
+//   test t;
+//   t.foo().set( 10 );             // modifies t
+//   t.bar().set( 5 );              // modifies a copy of t
+//   std::cout << t.x << std::endl; // prints 10
+// }
+
+// #include <iostream>
+// using namespace std;
+// class demo
+// {
+//   int a;
+// public:
+//   demo():a(9){}
+//   demo& fun()//return type isdemo&
+//   {
+//     return *this;
+//   }
+// };
+
+// int main()
+// {
+//   demo obj;
+//   obj.fun();
+//   return 0;
+// }
