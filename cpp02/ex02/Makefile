@@ -1,4 +1,4 @@
-NAME = Harl
+NAME = Fixed
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
