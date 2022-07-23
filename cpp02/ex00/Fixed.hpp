@@ -6,13 +6,13 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 14:21:45 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/22 15:40:00 by imabid           ###   ########.fr       */
+/*   Updated: 2022/07/23 11:11:14 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 #define FIXED_HPP
-
+#include <iostream>
 class Fixed
 {
 private:
