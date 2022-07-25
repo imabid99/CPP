@@ -241,38 +241,38 @@
 // }
 // EXEMPLE3: special
 
-class Vec
-{
-private:
-    int * vec;
-    int size;
-public:
-	Vec (int size = 10)
-    {
-		this->size = size;  
-		this->vec = new int [size];
-	}
-	// Vec (const Vec & other)
-	// {
-	// 	std::cout << "copy constructor" << std::endl;
-	// 	this->size = other.size;
-	// 	this->vec = new int [this->size];
-	// 	for (int i = 0; i < this->size; ++i)
-	// 	{
-	// 		this->vec[i] = other.vec[i];
-	// 	}
-	// }
-	~Vec () 
-	{
-		delete [] this->vec;
-	}
-};
-int main()
-{
-    Vec a (5);
-    Vec b (10); // or Vector b = a;
-	a = b; // translates to a.operator = (b);
-}
+// class Vec
+// {
+// private:
+//     int * vec;
+//     int size;
+// public:
+// 	Vec (int size = 10)
+//     {
+// 		this->size = size;  
+// 		this->vec = new int [size];
+// 	}
+// 	// Vec (const Vec & other)
+// 	// {
+// 	// 	std::cout << "copy constructor" << std::endl;
+// 	// 	this->size = other.size;
+// 	// 	this->vec = new int [this->size];
+// 	// 	for (int i = 0; i < this->size; ++i)
+// 	// 	{
+// 	// 		this->vec[i] = other.vec[i];
+// 	// 	}
+// 	// }
+// 	~Vec () 
+// 	{
+// 		delete [] this->vec;
+// 	}
+// };
+// int main()
+// {
+//     Vec a (5);
+//     Vec b (10); // or Vector b = a;
+// 	a = b; // translates to a.operator = (b);
+// }
 
 // copy constructor and assignment operator are 
 // similar as they are both used to initailize one 
@@ -300,7 +300,6 @@ int main()
 //   t.bar().set( 5 );              // modifies a copy of t
 //   std::cout << t.x << std::endl; // prints 10
 // }
-
 // #include <iostream>
 // using namespace std;
 // class demo
