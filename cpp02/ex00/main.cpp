@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 14:21:47 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/23 14:41:13 by imabid           ###   ########.fr       */
+/*   Updated: 2022/08/31 14:32:41 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main()
 {
     Fixed a;
-    Fixed b( a );
+    Fixed b(a);
     Fixed c;
     c = b;
     std::cout << a.getRawBits() << std::endl;

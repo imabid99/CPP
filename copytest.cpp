@@ -9,6 +9,7 @@ class Copy {
             a = f;
             b = j;
         };
+        // Copy();
         // ~Copy();
         Copy(Copy &s)
         {
@@ -27,7 +28,7 @@ class Copy {
 
 int main()
 {
-    Copy p(50,80),p2(p),p3(p2);
+    Copy p(50,80),p2(p),p3 = p2;
     p3.print();
     return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 14:21:28 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/23 14:41:34 by imabid           ###   ########.fr       */
+/*   Updated: 2022/08/31 14:35:18 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ Fixed &Fixed::operator=(const Fixed &other)
     if(this != &other)
         this->fix_p = other.getRawBits();
     return *this;
-    
 }
 
 int Fixed::getRawBits(void) const
@@ -46,5 +45,6 @@ int Fixed::getRawBits(void) const
 
 void Fixed::setRawBits(int const raw)
 {
+    std::cout <<  "raw = " <<raw << std::endl;
     this->fix_p = raw;
 }
