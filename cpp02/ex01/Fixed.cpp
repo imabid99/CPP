@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:02:40 by imabid            #+#    #+#             */
-/*   Updated: 2022/07/24 13:49:50 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/01 15:48:00 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,23 @@ Fixed::Fixed()
 Fixed::Fixed(int raw)
 {
     std::cout << "Int constructor called" << std::endl;
-    fix_p = raw;
+    fix_p = raw << frac_bits;
+    std::cout << "this is fix_p in int = " << fix_p << std::endl;
     
 }
 
 Fixed::Fixed(float raw)
 {
     std::cout << "Float constructor called" << std::endl;
-    fix_p = raw;
+    fix_p = (int)roundf(raw * (1 << frac_bits));
+    std::cout << "this is fix_p int float = " << fix_p << std::endl;
 }
 
 Fixed::Fixed(const Fixed &other)
 {
     std::cout << "Copy constructor called" << std::endl;
     this->fix_p = other.getRawBits();
+     std::cout << "this is fix_p in int in copy = " << fix_p << std::endl;
 }
 
 Fixed &Fixed::operator=(const Fixed &other)
@@ -56,6 +59,22 @@ void Fixed::setRawBits(int const raw)
 
 Fixed::~Fixed()
 {
-    std::cout << "Destructor called" << std::endl;
-    
+    std::cout << "Destructor called" << std::endl;  
+}
+
+int Fixed::toInt(void) const
+{
+    return((int)this->fix_p >> frac_bits);
+}
+
+float Fixed::toFloat(void) const
+{
+     std::cout << "this is fix_p int to float = " << (float(this->fix_p) / (1 << frac_bits)) << std::endl;
+    return (float(this->fix_p) / (1 << frac_bits));
+}
+
+std::ostream&   operator<<(std::ostream &out, const Fixed &fixed)
+ {
+    out << fixed.toFloat();
+    return out;
 }

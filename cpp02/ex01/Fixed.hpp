@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:03:51 by imabid            #+#    #+#             */
-/*   Updated: 2022/08/24 14:44:04 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/01 15:34:14 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ class Fixed
     int toInt(void) const;
     
 };
+
+std::ostream&   operator<<(std::ostream &out, const Fixed &fixed);
 
 #endif
