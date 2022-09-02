@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:02:09 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/01 20:12:49 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/02 13:43:31 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,26 @@ class Fixed
         ~Fixed();
         float toFloat(void) const;
         int toInt(void) const;
-        
+        Fixed   operator*(Fixed const &fix);
+        Fixed   operator/(Fixed const &fix);
+        Fixed   operator-(Fixed const &fix);
+        Fixed   operator+(Fixed const &fix);
+        bool    operator>(Fixed const &fix) const;
+        bool    operator<(Fixed const &fix) const;
+        bool    operator>=(Fixed const &fix) const;
+        bool    operator<=(Fixed const &fix) const;
+        bool    operator==(Fixed const &fix) const;
+        bool    operator!=(Fixed const &fix) const;
+        static Fixed    &min(Fixed &a, Fixed &b);
+        static Fixed    &max(Fixed  &a, Fixed &b);
+        static Fixed const    &min(Fixed const &a, Fixed const &b);
+        static Fixed const   &max(Fixed const &a, Fixed const &b);
+        Fixed   operator++();
+        Fixed   operator--();
+        Fixed   operator++(int);
+        Fixed   operator--(int);
 };
+
+std::ostream    &operator<<(std::ostream &out, const Fixed &fixed);
 
 #endif
