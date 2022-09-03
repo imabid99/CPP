@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:02:52 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/02 16:45:56 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/03 15:39:09 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ float Fixed::toFloat(void) const
     return float(this->fix_p) / (1 << frac_bits);
 }
 
-std::ostream&   operator<<(std::ostream &out, const Fixed &fixed)
+std::ostream   &operator<<(std::ostream &out, const Fixed &fixed)
 {
     out << fixed.toFloat();
     return out;

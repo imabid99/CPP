@@ -395,35 +395,35 @@
 //     u.print();
 // }
 
-class Binar {
-    private:
-        int x;
-        int y;
-    public:
-        Binar(int a,int b)
-        {
-            x = a;
-            y = b;
-        }
-        void print()
-        {
-            std::cout << x << " " << y << std::endl;
-        }
-        Binar  operator+(Binar v2)
-        {
-            int x1,y1;
-            x1 = this->x + v2.x;
-            y1 = this->y + v2.y;
-            Binar v3 = Binar(x1,y1);
-            return v3;
-        }
-};
+// class Binar {
+//     private:
+//         int x;
+//         int y;
+//     public:
+//         Binar(int a,int b)
+//         {
+//             x = a;
+//             y = b;
+//         }
+//         void print()
+//         {
+//             std::cout << x << " " << y << std::endl;
+//         }
+//         Binar  operator+(Binar v2)
+//         {
+//             int x1,y1;
+//             x1 = this->x + v2.x;
+//             y1 = this->y + v2.y;
+//             Binar v3 = Binar(x1,y1);
+//             return v3;
+//         }
+// };
 
-int main()
-{
-    Binar a(2,3),b(4,5);
-    a.print();
-    b.print();
-    Binar c = a + b;
-    c.print();
-}
+// int main()
+// {
+//     Binar a(2,3),b(4,5);
+//     a.print();
+//     b.print();
+//     Binar c = a + b;
+//     c.print();
+// }
