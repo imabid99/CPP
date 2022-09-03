@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:02:09 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/02 13:43:31 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/03 11:15:21 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,6 @@ class Fixed
         Fixed   operator--(int);
 };
 
-std::ostream    &operator<<(std::ostream &out, const Fixed &fixed);
+std::ostream     &operator<<(std::ostream &out, const Fixed &fixed);
 
 #endif

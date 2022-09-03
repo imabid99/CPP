@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:02:40 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/01 16:00:45 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/02 17:21:49 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Fixed::Fixed()
 {
     std::cout << "Default constructor called" << std::endl;
+    fix_p = 0;
 }
 
 Fixed::Fixed(int raw)

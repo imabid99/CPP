@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:02:52 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/02 13:56:25 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/02 16:45:56 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,17 +64,19 @@ float Fixed::toFloat(void) const
 }
 
 std::ostream&   operator<<(std::ostream &out, const Fixed &fixed)
- {
+{
     out << fixed.toFloat();
     return out;
 }
 
 bool    Fixed::operator>(Fixed const &fix) const
 {
-    // if(this->fix_p > fix.fix_p)
-    //     return true;
-    // return false;
     return this->fix_p > fix.getRawBits();
+}
+
+bool    Fixed::operator<(Fixed const &fix) const
+{
+    return this->fix_p < fix.getRawBits();
 }
 
 bool    Fixed::operator<=(Fixed const &fix) const

@@ -319,3 +319,111 @@
 //   obj.fun();
 //   return 0;
 // }
+
+// #include <iostream>
+// using namespace std;
+
+// class Count {
+//    private:
+//     int value;
+
+//    public:
+
+//     // Constructor to initialize count to 5
+//     Count() : value(5) {}
+
+
+//     // Overload ++ when used as prefix
+//     void operator ++ () {
+//         ++value;
+//     }
+
+
+//     // Overload ++ when used as postfix
+//     void operator ++ (int) {
+//         value++;
+//     }
+
+//     void display() {
+//         cout << "Count: " << value << endl;
+//     }
+// };
+
+// int main() {
+//     Count count1;
+
+//     // Call the "void operator ++ (int)" function
+//     count1++;
+//     count1.display();
+
+//     // Call the "void operator ++ ()" function
+//     ++count1;
+
+//     count1.display();
+//     return 0;
+// }
+
+
+
+// class Hello{
+//     private:
+//         int i;
+//         std::string a;
+//         int b;
+//     public:
+//         Hello(int f,std::string g, int h)
+//         {
+//             i = f;
+//             a = g;
+//             b = h;
+//         }
+//         void    print()
+//         {
+//             std::cout << i << std::endl << a << std::endl << b << std::endl;
+//         }
+//         void    operator++(int)
+//         {
+//             i++;
+//         }
+// };
+
+// int main()
+// {
+//     Hello u(19,"imad",12);
+//     u.print();
+//     u++;
+//     u.print();
+// }
+
+class Binar {
+    private:
+        int x;
+        int y;
+    public:
+        Binar(int a,int b)
+        {
+            x = a;
+            y = b;
+        }
+        void print()
+        {
+            std::cout << x << " " << y << std::endl;
+        }
+        Binar  operator+(Binar v2)
+        {
+            int x1,y1;
+            x1 = this->x + v2.x;
+            y1 = this->y + v2.y;
+            Binar v3 = Binar(x1,y1);
+            return v3;
+        }
+};
+
+int main()
+{
+    Binar a(2,3),b(4,5);
+    a.print();
+    b.print();
+    Binar c = a + b;
+    c.print();
+}

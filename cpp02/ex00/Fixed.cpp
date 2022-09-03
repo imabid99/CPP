@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 14:21:28 by imabid            #+#    #+#             */
-/*   Updated: 2022/08/31 14:35:18 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/03 11:50:03 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,5 @@ int Fixed::getRawBits(void) const
 
 void Fixed::setRawBits(int const raw)
 {
-    std::cout <<  "raw = " <<raw << std::endl;
     this->fix_p = raw;
 }
