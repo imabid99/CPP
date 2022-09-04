@@ -427,3 +427,22 @@
 //     Binar c = a + b;
 //     c.print();
 // }
+
+
+class Parent {
+    public:
+        int a = 10;
+};
+class child : public Parent{
+    public:
+        int a = 20;
+};
+
+int main()
+{
+    Parent a;
+    child b;
+
+    std::cout << b.a;
+    std::cout << b.Parent::a;
+}
