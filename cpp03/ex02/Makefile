@@ -1,9 +1,9 @@
-NAME = Fixed
+NAME = ClapTrap
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INL = Fixed.hpp
+INL = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 SRCS = main.cpp \
 		ClapTrap.cpp \
