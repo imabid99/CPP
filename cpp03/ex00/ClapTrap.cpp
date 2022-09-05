@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 12:50:45 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/05 14:37:18 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/05 14:39:50 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor called" << std::endl;   
+    std::cout << this->name << " Destructor called" << std::endl;   
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
