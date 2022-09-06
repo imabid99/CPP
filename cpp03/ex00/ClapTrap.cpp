@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 12:50:45 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/05 14:41:48 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/06 12:21:10 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,18 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << this->name << " Destructor called" << std::endl;   
+    std::cout << "ClapTrap " <<  this->name << " Destructor called" << std::endl;   
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "ClapTrap " <<  this->name << " Copy constructor called" << std::endl;
      *this = other;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "ClapTrap " <<  this->name <<  " Copy assignment operator called" << std::endl;
     if(this != &other)
     {
         this->name = other.name;
