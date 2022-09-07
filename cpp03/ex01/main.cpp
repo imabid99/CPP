@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 12:51:00 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/07 16:18:10 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/07 17:22:41 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,10 @@
 
 int main()
 {
-	// ClapTrap im("imad");
-    ScavTrap i;
+    ScavTrap im;
 
-	// im.attack("Somting!");
-	// im.takeDamage(7);
-	// im.beRepaired(3);
-    // im.attack("i");
-	// im.takeDamage(7);
-	// im.beRepaired(3);
+	im.attack("Somting!");
+	im.takeDamage(7);
+	im.beRepaired(4);
+	im.guardGate();
 }

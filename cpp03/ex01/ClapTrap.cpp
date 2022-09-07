@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 12:50:56 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/07 16:48:52 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/07 17:20:49 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,11 +72,11 @@ void ClapTrap::takeDamage(unsigned int amount)
     if(this->hit_point > amount && energy_point)
     {
         this->hit_point -= amount;
-        std::cout << "ClapTrap " << this->name << " take damage " << amount << " and his health decreased to " << this->hit_point  << std::endl;
+        std::cout << this->name << " take damage " << amount << " and his health decreased to " << this->hit_point  << std::endl;
     }
     else
     {
-        std::cout << "ClapTrap " << this->name << " take damage " << amount << " and his is dead" << std::endl;
+        std::cout <<  this->name << " take damage " << amount << " and his is dead" << std::endl;
         this->hit_point = 0;
     }
 }
@@ -86,10 +86,10 @@ void ClapTrap::beRepaired(unsigned int amount)
     if(this->hit_point != 0 && energy_point)
     {
         this->hit_point += amount;
-        std::cout << "ClapTrap " << this->name << " is repaired by " << amount << " and his health increased to " << this->hit_point << std::endl;
+        std::cout <<  this->name << " is repaired by " << amount << " and his health increased to " << this->hit_point << std::endl;
     }
     else
     {
-         std::cout << "ClapTrap " << this->name << " can't repaire" << std::endl;
+         std::cout << this->name << " can't repaire" << std::endl;
     }
 }
