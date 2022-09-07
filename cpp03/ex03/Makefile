@@ -1,4 +1,4 @@
-NAME = ClapTrap
+NAME = DiamondTrap
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98

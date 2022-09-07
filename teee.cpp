@@ -494,78 +494,145 @@
 // }
 // ***************** private to public *******************
 
-class A {
-    int i;
-    public:
-    int k,j;
-    int geti(){
-        return i;
-    }
-    void    seti(int x)
-    {
-        i = x;
-    }
-};
-class B : A{
-    public:
-    A::geti;
-    A::seti;
+// class A {
+//     int i;
+//     public:
+//     int k,j;
+//     int geti(){
+//         return i;
+//     }
+//     void    seti(int x)
+//     {
+//         i = x;
+//     }
+// };
+// class B : A{
+//     public:
+//     A::geti;
+//     A::seti;
 
-};
+// };
 
-int main()
-{
-    B a;
-    a.seti(5);
-    std::cout << a.geti() << std::endl;
-}
+// int main()
+// {
+//     B a;
+//     a.seti(5);
+//     std::cout << a.geti() << std::endl;
+// }
 
-// *************constructure and destructor********************
+// // *************constructure and destructor********************
 
-class A {
-    public:
-    A()
-    {
-        std::cout << "def a" << std::endl;
-    }
-    A(int b)
-    {
-         std::cout << "par a" << std::endl;
-    }
-    ~A()
-    {
-        std::cout << "D A" << std::endl;
-    }
-    void    attack(std::string name)
-    {
-        std::cout << "the a attack" << std::endl;
+// class A {
+//     public:
+//     A()
+//     {
+//         std::cout << "def a" << std::endl;
+//     }
+//     A(int b)
+//     {
+//          std::cout << "par a" << std::endl;
+//     }
+//     ~A()
+//     {
+//         std::cout << "D A" << std::endl;
+//     }
+//     void    attack(std::string name)
+//     {
+//         std::cout << "the a attack" << std::endl;
         
-    }
-};
-class B : public A{
-    public:
-    B():A()
-    {
-        std::cout << "def b" << std::endl;
-    }
-    B(int b):A(b)
-    {
-         std::cout << "par b" << std::endl;
-    }
-    ~B()
-    {
-        std::cout << "D B" << std::endl;
-    }
-    void    attack(std::string name)
-    {
-        std::cout << "the b attack" << std::endl;
+//     }
+// };
+// class B : public A{
+//     public:
+//     B():A()
+//     {
+//         std::cout << "def b" << std::endl;
+//     }
+//     B(int b):A(b)
+//     {
+//          std::cout << "par b" << std::endl;
+//     }
+//     ~B()
+//     {
+//         std::cout << "D B" << std::endl;
+//     }
+//     void    attack(std::string name)
+//     {
+//         std::cout << "the b attack" << std::endl;
         
-    }
+//     }
 
-};
+// };
 
-int main()
-{
-    B a;
-    a.attack("imad");
-}
+// int main()
+// {
+//     B a;
+//     a.attack("imad");
+// }
+
+// **************multiple inher****************
+
+// class A{
+//     std::string name;
+//     protected:
+//         void    setname(std::string name){
+//             this->name = name;
+//         }
+//         void    print()
+//         {
+//             std::cout << this->name << std::endl;
+//         }
+// };
+// class B{
+//     int id;
+//     protected:
+//         void    setid(int id){
+//             this->id = id;
+//         }
+//         void    print()
+//         {
+//             std::cout << this->id << std::endl;
+//         }
+// };
+
+
+// class C : public A , public B{
+//     public:
+//         C(std::string name,int id){
+//             setname(name);
+//             setid(id);
+//         }
+//         void    print()
+//         {
+//             B::print();
+//             A::print();
+//         }
+// };
+
+// int main()
+// {
+//     // C b("imad",23);
+//     // b.print();
+// }
+
+
+// -Wshadow, -Wno-shadlow
+
+// The -Wshadow option warns if a local variable is overwritten or a parameter is overwritten.
+// A warning is given when compiling with clang++ -Wshadow test.cpp.
+// And here, when compiling with clang++ -Wshadow -Wno-shadow test.cpp , the warning disappears as in the second picture.
+// -Wno-shadow is an option that disables -Wshadow warnings.
+
+// int main()
+// {
+//     int a;
+//     a = 3;
+//     int i = 0;
+//     while(i < 10)
+//     {
+//     int a;
+//     a= 5;
+//     std::cout << a;
+//     }
+
+// }
