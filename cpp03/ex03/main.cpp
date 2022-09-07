@@ -6,20 +6,21 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 13:15:05 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/07 18:46:51 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/07 21:26:22 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
-    ClapTrap im("imad");
+    DiamondTrap im("imad");
 
-	im.attack("Somting!");
-	im.takeDamage(7);
-	im.beRepaired(4);
+	// im.attack("Somting!");
+	// im.takeDamage(7);
+	// im.beRepaired(4);
     // im.highFivesGuys();
 }
