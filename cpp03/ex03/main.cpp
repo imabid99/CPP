@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 13:15:05 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/07 21:26:22 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/07 21:37:51 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int main()
 {
-    DiamondTrap im("imad");
+    DiamondTrap im;
 
 	// im.attack("Somting!");
 	// im.takeDamage(7);
