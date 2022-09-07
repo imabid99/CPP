@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 12:50:58 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/05 15:06:03 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/07 16:41:39 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-    private:
+    protected:
         std::string name;
         unsigned int hit_point;
         unsigned int energy_point;

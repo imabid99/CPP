@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 12:50:56 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/05 15:00:34 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/07 16:42:30 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ClapTrap::ClapTrap()
 {
     this->name = "default";
-    std::cout << this->name << " constructor called" << std::endl;
+    std::cout << "ClapTrap " << this->name << " constructor called" << std::endl;
     this->hit_point = 10;
     this->energy_point = 10;
     this->attack_damage = 0;
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap()
 ClapTrap::ClapTrap(std::string name)
 {
     this->name = name;
-    std::cout << this->name << " constructor called" << std::endl;
+    std::cout << "ClapTrap " << this->name << " constructor called" << std::endl;
     this->hit_point = 10;
     this->energy_point = 10;
     this->attack_damage = 0;
@@ -37,13 +37,13 @@ ClapTrap::~ClapTrap()
 
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "ClapTrap " << "Copy constructor called" << std::endl;
      *this = other;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "ClapTrap " << "Copy assignment operator called" << std::endl;
     if(this != &other)
     {
         this->name = other.name;
@@ -59,7 +59,7 @@ void ClapTrap::attack(const std::string& target)
     if(this->hit_point && energy_point)
     {
         std::cout << "ClapTrap " << this->name << " attacks " << target << " , causing " << this->attack_damage << " points of damage!" << std::endl;
-        this->energy_point--;
+        this->energy_point -= 1;
     }
     else
     {

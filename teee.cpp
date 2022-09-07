@@ -429,21 +429,143 @@
 //     c.print();
 // }
 
+// ***************inheritance*****************
+// class Parent {
+//     public:
+//         int a = 10;
+// };
+// class child : public Parent{
+//     public:
+//         int a = 20;
+// };
 
-class Parent {
+// int main()
+// {
+//     Parent a;
+//     child b;
+
+//     std::cout << b.a;
+//     std::cout << b.Parent::a;
+// }
+
+// class Y {
+//     protected:
+//     int height;
+//     int width;
+//     public:
+//     Y()
+//     {
+//         std::cout << "def" << std::endl;
+        
+//     };
+//     void    set_values(int h,int b)
+//     {
+//         std::cout << "set value called" << std::endl;
+//         height = h;
+//         width = b;
+//     }
+// };
+// class J : public Y {
+
+//     public:
+//     int     area()
+//     {   
+//         std::cout << "area J called" << std::endl;
+//         return (width + height);
+//     }
+// };
+// class K : public Y {
+//     public:
+//     int    area()
+//     {   
+//         std::cout << "area K called" << std::endl;
+//         return (width * height);
+//     }
+// };
+
+// int main()
+// {
+//     K y;
+//     J b;
+//     y.set_values(5,2);
+//     b.set_values(5,2);
+//     std::cout << y.area() << std::endl;
+//     std::cout << b.area() << std::endl;
+// }
+// ***************** private to public *******************
+
+class A {
+    int i;
     public:
-        int a = 10;
+    int k,j;
+    int geti(){
+        return i;
+    }
+    void    seti(int x)
+    {
+        i = x;
+    }
 };
-class child : public Parent{
+class B : A{
     public:
-        int a = 20;
+    A::geti;
+    A::seti;
+
 };
 
 int main()
 {
-    Parent a;
-    child b;
+    B a;
+    a.seti(5);
+    std::cout << a.geti() << std::endl;
+}
 
-    std::cout << b.a;
-    std::cout << b.Parent::a;
+// *************constructure and destructor********************
+
+class A {
+    public:
+    A()
+    {
+        std::cout << "def a" << std::endl;
+    }
+    A(int b)
+    {
+         std::cout << "par a" << std::endl;
+    }
+    ~A()
+    {
+        std::cout << "D A" << std::endl;
+    }
+    void    attack(std::string name)
+    {
+        std::cout << "the a attack" << std::endl;
+        
+    }
+};
+class B : public A{
+    public:
+    B():A()
+    {
+        std::cout << "def b" << std::endl;
+    }
+    B(int b):A(b)
+    {
+         std::cout << "par b" << std::endl;
+    }
+    ~B()
+    {
+        std::cout << "D B" << std::endl;
+    }
+    void    attack(std::string name)
+    {
+        std::cout << "the b attack" << std::endl;
+        
+    }
+
+};
+
+int main()
+{
+    B a;
+    a.attack("imad");
 }
