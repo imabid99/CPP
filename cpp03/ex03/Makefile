@@ -7,7 +7,7 @@ INL = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
 SRCS = main.cpp \
 		ClapTrap.cpp \
-		ScavTrap.hpp \
+		ScavTrap.cpp \
 		FragTrap.cpp \
 		DiamondTrap.cpp
 

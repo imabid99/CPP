@@ -1,4 +1,4 @@
-NAME = ClapTrap
+NAME = FragTrap
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
@@ -7,7 +7,7 @@ INL = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
 SRCS = main.cpp \
 		ClapTrap.cpp \
-		ScavTrap.hpp \
+		ScavTrap.cpp \
 		FragTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
