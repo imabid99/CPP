@@ -6,30 +6,29 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 13:14:55 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/08 14:28:48 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/08 17:59:48 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap() : ClapTrap(), FragTrap(), ScavTrap()
+DiamondTrap::DiamondTrap() : FragTrap(), ScavTrap()
 {
-    this->name = ClapTrap::name;
+    this->name = "default";
     std::cout << "DiamondTrap " << this->name << " constructor called" << std::endl;
     FragTrap::hit_point = 100;
     ScavTrap::energy_point = 50;
     FragTrap::attack_damage = 30;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), FragTrap(name), ScavTrap(name)
+DiamondTrap::DiamondTrap(std::string _name) : FragTrap(_name), ScavTrap(_name)
 {
-    this->name = ClapTrap::name;
-    ClapTrap::name = name + "_clap_name";
+    this->name = _name;
+    ClapTrap::name = _name + "_clap_name";
     std::cout << "DiamondTrap " << this->name << " constructor called" << std::endl;
     FragTrap::hit_point = 100;
     ScavTrap::energy_point = 50;
     FragTrap::attack_damage = 30;
-    std::cout << FragTrap::attack_damage << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()

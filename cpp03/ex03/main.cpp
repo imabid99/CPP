@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 13:15:05 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/08 14:42:09 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/08 18:01:29 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main()
 	ScavTrap scap("abid");
 	FragTrap frap("imabid");
 	DiamondTrap diap("diamond");
-	
+
 	std::cout << std::endl;
 	
 	clap.attack("abid");
@@ -47,6 +47,7 @@ int	main()
 	frap.takeDamage(30);
 	frap.highFivesGuys();
 	diap.whoAmI();
+	
 	
 	std::cout << std::endl;
 	

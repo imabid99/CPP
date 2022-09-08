@@ -669,27 +669,27 @@
 //     d.dis();
 // }
 
-class A{public: int _a;};
+// class A{public: int _a;};
 
-class B:public A{public: int _b;};
+// class B:public A{public: int _b;};
 
-class C:public A{public: int _c;};
+// class C:public A{public: int _c;};
 
-class D:public B,public C{public: int _d;};
+// class D:public B,public C{public: int _d;};
 
-int main()
-{
-    D d;
+// int main()
+// {
+//     D d;
 
-    // this tree work
-    // d._b = 10;
-    // d._c = 10;
-    // d._d = 10;
+//     // this tree work
+//     // d._b = 10;
+//     // d._c = 10;
+//     // d._d = 10;
 
-    // but this not work
-    // d._a = 10;
+//     // but this not work
+//     // d._a = 10;
 
-}
+// }
 
 // A 
 // a
@@ -704,3 +704,38 @@ int main()
 // a and b and a and c and d
 
 // when we do virtual the two a come one a
+
+
+
+#include<iostream>
+using namespace std;
+class Person {
+public:
+    Person(int x)  { cout << "Person::Person(int ) called" << endl;   }
+    Person()     { cout << "Person::Person() called" << endl;   }
+};
+ 
+class Faculty : virtual public Person {
+public:
+    Faculty(int x):Person(x)   {
+       cout<<"Faculty::Faculty(int ) called"<< endl;
+    }
+};
+ 
+class Student : virtual public Person {
+public:
+    Student(int x):Person(x) {
+        cout<<"Student::Student(int ) called"<< endl;
+    }
+};
+ 
+class TA : public Faculty, public Student  {
+public:
+    TA(int x):Student(x), Faculty(x)   {
+        cout<<"TA::TA(int ) called"<< endl;
+    }
+};
+ 
+int main()  {
+    TA ta1(30);
+}

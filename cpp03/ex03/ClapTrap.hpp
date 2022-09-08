@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 13:14:52 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/07 18:38:16 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/08 16:35:11 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class ClapTrap
         unsigned int attack_damage;  
     public:
         ClapTrap();
-        ClapTrap(std::string name);
+        ClapTrap(std::string _name);
         ClapTrap(const ClapTrap &other);
 	    ClapTrap &operator=(const ClapTrap &other);
         void attack(const std::string& target);

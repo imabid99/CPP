@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 13:14:57 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/08 10:25:56 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/08 17:27:46 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class  DiamondTrap : public FragTrap, public ScavTrap
         std::string name;
     public:
         DiamondTrap();
-        DiamondTrap(std::string name);
+        DiamondTrap(std::string _name);
         DiamondTrap(const  DiamondTrap &other);
 	    DiamondTrap &operator=(const  DiamondTrap &other);
         void attack(const std::string& target);

@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 13:14:49 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/08 14:41:00 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/08 17:35:17 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ ClapTrap::ClapTrap()
     this->attack_damage = 0;
 }
 
-ClapTrap::ClapTrap(std::string name)
+ClapTrap::ClapTrap(std::string _name)
 {
-    this->name = name;
+    this->name = _name;
     std::cout << "ClapTrap " << this->name << " constructor called" << std::endl;
     this->hit_point = 10;
     this->energy_point = 10;

@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 12:50:45 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/08 15:05:13 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/08 15:05:37 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,6 @@ void ClapTrap::beRepaired(unsigned int amount)
         std::cout << "ClapTrap " << this->name << " is repaired by " << amount << " and his health increased to " << this->hit_point << std::endl;
     }
     else
-    {
          std::cout << "ClapTrap " << this->name << " can't repaire" << std::endl;
-    }
 }
 
