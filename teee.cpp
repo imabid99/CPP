@@ -636,3 +636,71 @@
 //     }
 
 // }
+
+
+// **************virtaul**********
+
+// class A {
+//     public:
+//     void dis(){
+
+//     std::cout << "hello" << std::endl;
+//     }
+// };
+// class B: virtual public A {
+//     // void dis(){
+
+//     // std::cout << "hello B" << std::endl;
+//     // }
+// };
+// class C : virtual public A{
+//     // void dis(){
+
+//     // std::cout << "hello C" << std::endl;
+//     // }
+// };
+// class D : public C, public B{
+
+// };
+
+// int main()
+// {
+//     D d;
+//     d.dis();
+// }
+
+class A{public: int _a;};
+
+class B:public A{public: int _b;};
+
+class C:public A{public: int _c;};
+
+class D:public B,public C{public: int _d;};
+
+int main()
+{
+    D d;
+
+    // this tree work
+    // d._b = 10;
+    // d._c = 10;
+    // d._d = 10;
+
+    // but this not work
+    // d._a = 10;
+
+}
+
+// A 
+// a
+
+// B 
+// a and b
+
+// C 
+// a and c
+
+// D
+// a and b and a and c and d
+
+// when we do virtual the two a come one a

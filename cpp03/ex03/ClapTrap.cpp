@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 13:14:49 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/07 18:38:06 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/08 12:38:28 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ ClapTrap::~ClapTrap()
 
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-    std::cout << "Copy constructor called" << std::endl;
+    std::cout << "ClapTrap " << "Copy constructor called" << std::endl;
      *this = other;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
-    std::cout <<  "Copy assignment operator called" << std::endl;
+    std::cout <<  "ClapTrap " << "Copy assignment operator called" << std::endl;
     if(this != &other)
     {
         this->name = other.name;
@@ -85,6 +85,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     if(this->hit_point != 0 && energy_point)
     {
+        this->energy_point -= 1;
         this->hit_point += amount;
         std::cout <<  this->name << " is repaired by " << amount << " and his health increased to " << this->hit_point << std::endl;
     }

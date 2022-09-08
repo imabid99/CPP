@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 13:14:55 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/08 10:28:21 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/08 13:11:52 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,19 @@ DiamondTrap::DiamondTrap() : ClapTrap(), FragTrap(), ScavTrap()
 {
     this->name = ClapTrap::name;
     std::cout << "DiamondTrap " << this->name << " constructor called" << std::endl;
-    this->hit_point = 100;
-    this->energy_point = 50;
-    this->attack_damage = 20;
+    FragTrap::hit_point = 100;
+    ScavTrap::energy_point = 50;
+    FragTrap::attack_damage = 30;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), FragTrap(), ScavTrap()
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), FragTrap(name), ScavTrap(name)
 {
     this->name = ClapTrap::name;
+    ClapTrap::name = name + "_clap_name";
     std::cout << "DiamondTrap " << this->name << " constructor called" << std::endl;
-    this->hit_point = 100;
-    this->energy_point = 50;
-    this->attack_damage = 20;
+    FragTrap::hit_point = 100;
+    ScavTrap::energy_point = 50;
+    FragTrap::attack_damage = 30;
 }
 
 DiamondTrap::~DiamondTrap()
@@ -41,6 +42,18 @@ DiamondTrap::DiamondTrap(const DiamondTrap &other)
      *this = other;
 }
 
+DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
+{
+    std::cout << "DiamondTrap " << "Copy assignment operator called" << std::endl;
+    if(this != &other)
+    {
+        this->name = other.name;
+        this->hit_point = other.hit_point;
+        this->energy_point = other.hit_point;
+        this->attack_damage = other.attack_damage;
+    }
+    return *this;
+}
 
 void DiamondTrap::attack(const std::string& target)
 {
@@ -48,6 +61,6 @@ void DiamondTrap::attack(const std::string& target)
 }
 
 void    DiamondTrap::whoAmI()
-[
-    std::cout << "DiamondTrap is " << this->name << " and ClapTrap is" <<  ClapTrap::name << std::endl;
-]
+{  
+    std::cout << "DiamondTrap is " << this->name << " and ClapTrap is " <<  ClapTrap::name << std::endl;
+}
