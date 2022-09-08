@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/04 13:14:55 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/08 13:11:52 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/08 14:28:48 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), FragTrap(name), Sca
     FragTrap::hit_point = 100;
     ScavTrap::energy_point = 50;
     FragTrap::attack_damage = 30;
+    std::cout << FragTrap::attack_damage << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()
