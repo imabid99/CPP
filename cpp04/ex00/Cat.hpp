@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 18:42:01 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/09 16:36:39 by imabid           ###   ########.fr       */
+/*   Created: 2022/09/09 13:59:36 by imabid            #+#    #+#             */
+/*   Updated: 2022/09/09 16:58:23 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CAT_HPP
+#define CAT_HPP
+
 #include <iostream>
-#include "Zombie.hpp"
+#include "Animal.hpp"
 
-int main()
+class Cat : public Animal
 {
-    Zombie  *Zom = newZombie("heapZombie");
-    Zombie  *Zom1 = newZombie("heapZombie1");
-    randomChump("stackZombie");
+    public:
+        Cat();
+        Cat(const Cat &other);
+	    Cat &operator=(const Cat &other);
+        virtual void makeSound(void) const;
+        virtual ~Cat();
+};
 
-    
-    delete Zom;
-    delete Zom1;
-    return 0;
-}
+#endif

@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 18:42:01 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/09 16:36:39 by imabid           ###   ########.fr       */
+/*   Created: 2022/09/09 13:59:31 by imabid            #+#    #+#             */
+/*   Updated: 2022/09/09 16:58:48 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
+
 #include <iostream>
-#include "Zombie.hpp"
 
-int main()
+class Animal
 {
-    Zombie  *Zom = newZombie("heapZombie");
-    Zombie  *Zom1 = newZombie("heapZombie1");
-    randomChump("stackZombie");
+    protected:
+        std::string type;
+    public:
+        Animal();
+        Animal(const Animal &other);
+	    Animal &operator=(const Animal &other);
+        virtual void makeSound(void) const;
+	    std::string getType(void) const;
+        virtual ~Animal();
+};
 
-    
-    delete Zom;
-    delete Zom1;
-    return 0;
-}
+#endif

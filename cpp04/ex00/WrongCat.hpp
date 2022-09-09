@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 18:42:01 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/09 16:36:39 by imabid           ###   ########.fr       */
+/*   Created: 2022/09/09 16:43:26 by imabid            #+#    #+#             */
+/*   Updated: 2022/09/09 16:50:03 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
+
 #include <iostream>
-#include "Zombie.hpp"
+#include "WrongAnimal.hpp"
 
-int main()
+class WrongCat  : public WrongAnimal
 {
-    Zombie  *Zom = newZombie("heapZombie");
-    Zombie  *Zom1 = newZombie("heapZombie1");
-    randomChump("stackZombie");
+    public:
+        WrongCat ();
+        WrongCat (const WrongCat  &other);
+	    WrongCat  &operator=(const WrongCat  &other);
+        virtual void makeSound(void) const;
+        ~WrongCat ();
+};
 
-    
-    delete Zom;
-    delete Zom1;
-    return 0;
-}
+#endif

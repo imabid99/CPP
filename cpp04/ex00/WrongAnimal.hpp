@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 18:42:01 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/09 16:36:39 by imabid           ###   ########.fr       */
+/*   Created: 2022/09/09 16:43:20 by imabid            #+#    #+#             */
+/*   Updated: 2022/09/09 16:57:57 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
+
 #include <iostream>
-#include "Zombie.hpp"
 
-int main()
+class WrongAnimal
 {
-    Zombie  *Zom = newZombie("heapZombie");
-    Zombie  *Zom1 = newZombie("heapZombie1");
-    randomChump("stackZombie");
+    protected:
+        std::string type;
+    public:
+        WrongAnimal();
+        WrongAnimal(const WrongAnimal &other);
+	    WrongAnimal &operator=(const WrongAnimal &other);
+        void makeSound(void) const;
+	    std::string getType(void) const;
+        virtual ~WrongAnimal();
+};
 
-    
-    delete Zom;
-    delete Zom1;
-    return 0;
-}
+#endif
