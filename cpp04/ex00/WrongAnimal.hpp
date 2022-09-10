@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 16:43:20 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/09 16:57:57 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/10 14:01:24 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class WrongAnimal
 	    WrongAnimal &operator=(const WrongAnimal &other);
         void makeSound(void) const;
 	    std::string getType(void) const;
-        virtual ~WrongAnimal();
+        ~WrongAnimal();
 };
 
 #endif
