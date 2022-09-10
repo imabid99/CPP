@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 16:43:26 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/10 11:55:45 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/10 14:02:10 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class WrongCat  : public WrongAnimal
         WrongCat ();
         WrongCat (const WrongCat  &other);
 	    WrongCat  &operator=(const WrongCat  &other);
-        virtual void makeSound(void) const;
-        virtual ~WrongCat ();
+        void makeSound(void) const;
+        ~WrongCat ();
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 18:51:07 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/09 18:55:35 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/10 14:49:53 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Brain::~Brain()
 
 Brain::Brain(const Brain &other)
 {
-    std::cout << "Brain Copy constructor called" << std::endl;
+    std::cout << "Brain Copy  constructor called" << std::endl;
      *this = other;
 }
 

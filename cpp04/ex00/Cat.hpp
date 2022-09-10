@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:59:36 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/09 16:58:23 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/10 14:57:38 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Cat : public Animal
         Cat();
         Cat(const Cat &other);
 	    Cat &operator=(const Cat &other);
-        virtual void makeSound(void) const;
-        virtual ~Cat();
+        void makeSound(void) const;
+        ~Cat();
 };
 
 #endif

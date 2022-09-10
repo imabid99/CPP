@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:59:48 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/09 16:58:28 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/10 14:57:42 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Dog : public Animal
         Dog();
         Dog(const Dog &other);
 	    Dog &operator=(const Dog &other);
-        virtual void makeSound(void) const;
-        virtual ~Dog();
+        void makeSound(void) const;
+        ~Dog();
 };
 
 #endif
