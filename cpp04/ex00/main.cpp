@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:59:50 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/10 17:42:50 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/11 17:30:19 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ int main()
     
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
-    i->makeSound(); //will output the cat sound!
+    i->makeSound();
     j->makeSound();
     meta->makeSound();
     w->makeSound();
-    // ...
+
     delete meta;
     delete j;
     delete i;

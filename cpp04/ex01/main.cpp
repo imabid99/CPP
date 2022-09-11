@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:59:50 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/11 17:04:49 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/11 18:36:19 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,12 @@
 
 int main()
 {
-    // Cat *a = new Cat();
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
     
-    // Cat *b = new Cat();
-    // *b = *a;
-    // delete a;
-    // delete b;
-
-    // while (1)
-    // {
-    //     /* code */
-    // }
-
+    delete j;
+    delete i;
+    
     Animal	*a[4];
 
 	for(int i=0; i<4; i++) {
