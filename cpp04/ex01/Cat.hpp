@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:59:36 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/09 16:58:23 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/11 11:32:07 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,12 @@
 
 #include <iostream>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
+    private:
+        Brain *ba;
     public:
         Cat();
         Cat(const Cat &other);

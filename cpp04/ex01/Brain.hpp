@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 18:53:46 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/09 18:54:14 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/11 11:39:20 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Brain
 {
-    protected:
+    private:
         std::string ideas[100];
     public:
         Brain();
