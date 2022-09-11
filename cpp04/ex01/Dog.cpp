@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:59:39 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/11 17:38:50 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/11 18:44:24 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Dog &Dog::operator=(const Dog &other)
 
 void    Dog::makeSound() const
 {
-    std::cout << "Sound of Dog" << std::endl;
+    std::cout << "Haw Haw" << std::endl;
 }
 
 Dog::~Dog()

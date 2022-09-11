@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:59:34 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/11 11:29:35 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/11 18:40:54 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ Cat &Cat::operator=(const Cat &other)
 
 void    Cat::makeSound() const
 {
-    std::cout << "Sound of Cat" << std::endl;
+    std::cout << "Meow Meow" << std::endl;
 }
