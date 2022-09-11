@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:59:50 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/11 15:00:48 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/11 16:10:20 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,28 +19,43 @@
 
 int main()
 {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    delete j;
-    delete i;
+    Cat *a = new Cat();
+    
+    Cat *b = new Cat();
+    *b = *a;
+    delete a;
+    delete b;
 
-    Animal	*a[4];
+    while (1)
+    {
+        /* code */
+    }
+    
+    // const Animal* j = new Dog();
+    // const Animal* i = new Cat();
+    // delete j;
+    // delete i;
 
-	for(int i=0; i<4; i++) {
-		if (i < 2) {
-			a[i] = new Cat();
-		}
-		else {
-			a[i] = new Dog();
-		}
-	}
-	for(int i=0; i<4; i++) {
-		a[i]->makeSound();
-	}
+    // Animal	*a[4];
+    // Animal	*b[4];
+
+    // *b = *a;
+
+	// for(int i=0; i<4; i++) {
+	// 	if (i < 2) {
+	// 		a[i] = new Cat();
+	// 	}
+	// 	else {
+	// 		a[i] = new Dog();
+	// 	}
+	// }
+	// for(int i=0; i<4; i++) {
+	// 	a[i]->makeSound();
+	// }
 	
-	for(int i=0; i<4; i++) {
-		delete a[i];
-	}
+	// for(int i=0; i<4; i++) {
+	// 	delete a[i];
+	// }
     
     return 0;
 }
