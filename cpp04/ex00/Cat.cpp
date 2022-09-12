@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:59:34 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/11 18:40:54 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/11 20:52:59 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 Cat::Cat()
 {
     type = "Cat";
-    
     std::cout << "Cat defautl constructor called" << std::endl;
 }
 

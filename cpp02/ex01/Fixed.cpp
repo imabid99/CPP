@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:02:40 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/03 17:24:33 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/11 19:58:17 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,4 @@ std::ostream&   operator<<(std::ostream &out, const Fixed &fixed)
  {
     out << fixed.toFloat();
     return out;
-}
+}  
