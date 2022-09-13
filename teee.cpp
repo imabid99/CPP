@@ -746,27 +746,54 @@
 #include <iostream>
 #include <stdexcept>
 
-using namespace std;
+// using namespace std;
 
-int AddPositiveIntegers(int a, int b)
+// int AddPositiveIntegers(int a, int b)
+// {
+//     if (a < 0 || b < 0)
+//         throw std::invalid_argument("AddPositiveIntegers arguments must be positive");
+//     if(b > 0)
+//         throw std::invalid_argument("A is positive");
+//     return (a + b);
+// }
+
+// int main()
+// {
+//     try
+//     {
+//         cout << AddPositiveIntegers(-1, 2); //exception
+//     }
+
+//     catch (std::invalid_argument& e)
+//     {
+//         cerr << e.what() << endl;
+//         std::cout << "hello world" << std::endl;
+//     }
+//     catch (std::invalid_argument& e1)
+//     {
+//         cerr << e1.what() << endl;
+//         return -1;
+//     }
+
+//     return 0;
+// }
+
+std::string  agep(int a)
 {
-    if (a < 0 || b < 0)
-        throw std::invalid_argument("AddPositiveIntegers arguments must be positive");
-    return (a + b);
+    if(a <= 18)
+        throw (a);
+    
+    return ("u are old enough");
+    
 }
-
 int main()
 {
     try
     {
-        cout << AddPositiveIntegers(1, 2); //exception
+        std::cout << agep(20) << std::endl;
     }
-
-    catch (std::invalid_argument& e)
+    catch(int f)
     {
-        cerr << e.what() << endl;
-        return -1;
+        std::cout << "you are not old enough" << " Your age is " << f << std::endl;
     }
-
-    return 0;
 }
