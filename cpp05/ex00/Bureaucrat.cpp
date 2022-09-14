@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:44 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 14:40:08 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/14 16:32:28 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ Bureaucrat::Bureaucrat(std::string Name, int Grade) : name(Name) , grade(Grade)
 {
     if(this->grade < 1)
     {
-        std::cout << " hello ";
         throw Bureaucrat::GradeTooHighException();
     }
     else if(this->grade > 150)

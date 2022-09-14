@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:47 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 14:26:58 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/14 16:25:08 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
-
-#include <iostream>
-
+#include "Form.hpp"
+class Form;
 class Bureaucrat
 {
     private:
@@ -39,6 +38,7 @@ class Bureaucrat
         int getGrade() const;
         void    inc();
         void    dec();
+        void	signForm(Form f);
         ~Bureaucrat();
 };
 

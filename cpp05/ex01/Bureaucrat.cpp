@@ -6,10 +6,9 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:44 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 14:40:08 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/14 16:24:38 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "Bureaucrat.hpp"
 
@@ -75,6 +74,18 @@ void    Bureaucrat::dec()
     this->grade++;
     if(this->getGrade() > 150)
         throw Bureaucrat::GradeTooLowException();
+}
+
+void			Bureaucrat::signForm(Form f)
+{
+    if(f.getSign())
+    {
+        std::cout << this->name << " signed " << f.getName() << std::endl;
+    }
+    else
+    {
+        std::cout << this->name << " couldn't sign  " << f.getName() << "Because grade is not high enough " << std::endl;
+    }
 }
 
 std::ostream& operator<<(std::ostream& out ,const Bureaucrat& br)

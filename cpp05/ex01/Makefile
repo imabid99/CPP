@@ -3,10 +3,11 @@ NAME = Bureaucrat
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INL = Bureaucrat.hpp
+INL = Bureaucrat.hpp Form.hpp
 
 SRCS = main.cpp \
-		Bureaucrat.cpp
+		Bureaucrat.cpp \
+		Form.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
