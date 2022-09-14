@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:47 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/13 13:12:49 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/13 13:30:10 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 class Bureaucrat
 {
     private:
-        const std::string name;
+        std::string const  name;
         int grade;
     public:
-        Bureaucrat();
+        Bureaucrat(std::string Name, int Grade);
         Bureaucrat(const Bureaucrat &other);
 	    Bureaucrat &operator=(const Bureaucrat &other);
         std::string getName();
