@@ -429,7 +429,6 @@
 //     Binar c = a + b;
 //     c.print();
 // }
-
 // ***************inheritance*****************
 // class Parent {
 //     public:
@@ -778,22 +777,43 @@
 //     return 0;
 // }
 
-std::string  agep(int a)
-{
-    if(a <= 18)
-        throw (a);
+// std::string  agep(int a)
+// {
+//     if(a <= 18)
+//         throw (a);
     
-    return ("u are old enough");
+//     return ("u are old enough");
     
-}
+// }
+// int main()
+// {
+//     try
+//     {
+//         std::cout << agep(20) << std::endl; 
+//     }
+//     catch(int f)
+//     {
+//         std::cout << "you are not old enough" << " Your age is " << f << std::endl;
+//     }
+//     std::cout << "hello world" << std::endl;
+// }
+
 int main()
 {
+    int x = 0,y=0;
     try
     {
-        std::cout << agep(20) << std::endl;
+        /* code */
+    std::cout << "enter value" << std::endl;
+    std::cin >> x;
+    std::cin >> y;
+    if(y == 0)
+        throw std::exception();
+    std::cout << x / y << std::endl;
     }
-    catch(int f)
+    catch(const std::exception& e)
     {
-        std::cout << "you are not old enough" << " Your age is " << f << std::endl;
+        std::cerr << e.what() << '\n';
     }
-}
+    
+} 
