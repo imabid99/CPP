@@ -1,4 +1,4 @@
-NAME = Bureaucrat
+NAME = Form
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
@@ -7,7 +7,9 @@ INL = Bureaucrat.hpp Form.hpp
 
 SRCS = main.cpp \
 		Bureaucrat.cpp \
-		Form.cpp
+		Form.cpp \
+		PresidentialPardonForm.cpp \
+		RobotomyRequestForm.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

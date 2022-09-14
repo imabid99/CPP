@@ -705,9 +705,6 @@
 // a and b and a and c and d
 
 // when we do virtual the two a come one a
-
-
-
 // #include<iostream>
 // using namespace std;
 // class Person {
@@ -799,22 +796,28 @@
 //     std::cout << "hello world" << std::endl;
 // }
 
+// int main()
+// {
+//     int x = 0,y=0;
+//     try
+//     {
+//         /* code */
+//     std::cout << "enter value" << std::endl;
+//     std::cin >> x;
+//     std::cin >> y;
+//     if(y == 0)
+//         throw std::exception();
+//     std::cout << x / y << std::endl;
+//     }
+//     catch(const std::exception& e)
+//     {
+//         std::cerr << e.what() << '\n';
+//     }
+//     catch ()
+// } 
+
 int main()
 {
-    int x = 0,y=0;
-    try
-    {
-        /* code */
-    std::cout << "enter value" << std::endl;
-    std::cin >> x;
-    std::cin >> y;
-    if(y == 0)
-        throw std::exception();
-    std::cout << x / y << std::endl;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    
-} 
+    std::ofstream o;
+    o.open("hello");
+}

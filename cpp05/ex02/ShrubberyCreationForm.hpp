@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 16:55:47 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 18:22:43 by imabid           ###   ########.fr       */
+/*   Created: 2022/09/14 18:24:24 by imabid            #+#    #+#             */
+/*   Updated: 2022/09/14 18:50:12 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM_HPP
-#define PRESIDENTIALPARDONFORM_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
 
 #include <iostream>
 
 #include "Form.hpp"
 
-class PresidentialPardonForm : public Form
+class ShrubberyCreationForm : public Form
 {
     private:
         std::string target;
     public:
-        PresidentialPardonForm();
-        PresidentialPardonForm(std::string Target);
-        PresidentialPardonForm(const PresidentialPardonForm &other);
-	    PresidentialPardonForm &operator=(const PresidentialPardonForm &other);
+        ShrubberyCreationForm();
+        ShrubberyCreationForm(std::string Target);
+        ShrubberyCreationForm(const ShrubberyCreationForm &other);
+	    ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
         void    execute(Bureaucrat const & executor) const;
-        ~PresidentialPardonForm();
+        ~ShrubberyCreationForm();
 };
 
 #endif
