@@ -1,12 +1,12 @@
-NAME = Animal
+NAME = Bureaucrat
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
 INL = Bureaucrat.hpp
 
-SRCS = Bureaucrat.cpp \
-		main.cpp
+SRCS = main.cpp \
+		Bureaucrat.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
