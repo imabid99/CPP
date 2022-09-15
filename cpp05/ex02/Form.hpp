@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:50:52 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 16:08:40 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/14 19:39:34 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,13 @@ class Form
         {
             virtual const char* what() const throw();
         };
+        virtual void    execute(Bureaucrat const & executor) const = 0;
         std::string getName() const;
         bool        getSign() const;
         int         getSgrade() const;
         int         getEgrade() const;
         void        beSigned(Bureaucrat br);
-        ~Form();
+        virtual ~Form();
 };
 
 std::ostream& operator<<(std::ostream& out ,const Form& br);

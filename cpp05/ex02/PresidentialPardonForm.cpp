@@ -14,9 +14,8 @@
 
 PresidentialPardonForm::PresidentialPardonForm()
 {
-
 }
-PresidentialPardonForm::PresidentialPardonForm(std::string Target) : target(Target)
+PresidentialPardonForm::PresidentialPardonForm(std::string Target) : Form(Target, 145, 137), target(Target)
 {
 }
 

@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:47 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 16:25:08 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/14 19:36:44 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,12 @@ class Bureaucrat
         {
             virtual const char* what() const throw();
         };
+        void    executeForm(Form const & form);
         std::string getName() const;
         int getGrade() const;
         void    inc();
         void    dec();
-        void	signForm(Form f);
+        void	signForm(Form &f);
         ~Bureaucrat();
 };
 

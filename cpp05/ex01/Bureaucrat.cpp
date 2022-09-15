@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:44 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 16:24:38 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/14 19:51:17 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void    Bureaucrat::dec()
         throw Bureaucrat::GradeTooLowException();
 }
 
-void			Bureaucrat::signForm(Form f)
+void			Bureaucrat::signForm(Form &f)
 {
     if(f.getSign())
     {

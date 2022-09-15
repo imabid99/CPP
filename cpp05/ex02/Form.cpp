@@ -6,13 +6,13 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:03:15 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 18:23:32 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/15 10:15:55 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form() : name(""), sign(false) ,sgrade(20),egrade(30)
+Form::Form() : name("test"), sign(false) ,sgrade(150),egrade(150)
 {
 
 }
@@ -28,7 +28,7 @@ Form::Form(const Form &other) : name(""), sgrade(150),egrade(150)
 {
      *this = other;
 }
-
+ 
 Form &Form::operator=(const Form &other)
 {
     if(this != &other)

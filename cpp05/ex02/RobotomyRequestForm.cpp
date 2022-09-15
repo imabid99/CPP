@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 18:24:19 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 18:46:12 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/15 10:14:15 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ RobotomyRequestForm::RobotomyRequestForm()
 {
 
 }
-RobotomyRequestForm::RobotomyRequestForm(std::string Target) : target(Target)
+RobotomyRequestForm::RobotomyRequestForm(std::string Target) : Form(Target, 145, 137), target(Target)
 {
 }
 

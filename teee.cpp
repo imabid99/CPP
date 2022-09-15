@@ -815,9 +815,38 @@
 //     }
 //     catch ()
 // } 
-
+#include <fstream>
+#include <iostream>
 int main()
 {
     std::ofstream o;
-    o.open("hello");
-}
+    o.open("o");
+o << "                                                         .           "    << std::endl;
+o << "                                              .         ;           "    << std::endl;
+o << "                 .              .              ;%     ;;               "    << std::endl; 
+o << "                   ,           ,                :;;%;  %;                "    << std::endl;    
+o << "                    :         ;                   :;%;'     .,         "    << std::endl; 
+o << "           ,.        %;     %;            ;        %;'    ,;          "     << std::endl;
+o << "             ;       ;%;   %;        ,     %;    ;%;    ,%'       "    << std::endl;
+o << "              %;       ;%; %;      ,  ;       %;  ;%;   ,%;'             "  << std::endl;   
+o << "               ;%;      %;        ;%;        %; ;%;  ,%;'               "<< std::endl;   
+o << "                `%;.     ;%;     %;'         `;;%;;%;'                 "<< std::endl;   
+o << "                 `:;%.    ;;%. %@;        %; ;@%;;%'                   "<< std::endl;
+o << "                    `:%;.  :;bd%;          %;@%;'         "<< std::endl;
+o << "                      `@%:.  :;%.         ;@@%;'      "<< std::endl;
+o << "                        `@%.  `;@%.      ;@@%;             "<< std::endl;
+o << "                          `@%. `@%;    ;@@%;         "<< std::endl;
+o << "                            ;@%. :@%;  %@@%;          "<< std::endl;
+o << "                              %@bd;%;bd%;:;       "<< std::endl;
+o << "                                #@.##%:;;    "<< std::endl;
+o << "                                %@@##%::; "<< std::endl;
+o << "                                %@@@%(o);      . '         "<< std::endl;
+o << "                                %@@@o%;:(.,'             "<< std::endl;
+o << "                            `.. %@@@o%::;             "<< std::endl;
+o << "                               `)@@@o%::;             "<< std::endl;
+o << "                                %@@(o)::;         "<< std::endl;
+o << "                               .%@@@@%::;             "<< std::endl;
+o << "                               ;%@@@@%::;.            "<< std::endl;
+o << "                              ;%@@@@##:;;;.   "<< std::endl;
+o << "                          ...;%@@@@@##:;;;;,..        "<< std::endl;
+}   

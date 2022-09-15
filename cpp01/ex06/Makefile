@@ -1,16 +1,12 @@
-NAME = Bureaucrat
+NAME = harlFilter
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INL = Bureaucrat.hpp Form.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp ShrubberyCreationForm.hpp
+INL = Harl.hpp
 
 SRCS = main.cpp \
-		Bureaucrat.cpp \
-		Form.cpp \
-		RobotomyRequestForm.cpp \
-		PresidentialPardonForm.cpp \
-		ShrubberyCreationForm.cpp
+		Harl.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 

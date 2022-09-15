@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:44 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 16:24:38 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/15 15:54:52 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void    Bureaucrat::dec()
         throw Bureaucrat::GradeTooLowException();
 }
 
-void			Bureaucrat::signForm(Form f)
+void			Bureaucrat::signForm(Form &f)
 {
     if(f.getSign())
     {
@@ -88,6 +88,16 @@ void			Bureaucrat::signForm(Form f)
     }
 }
 
+void	Bureaucrat::executeForm(Form const &form)
+{
+    if(form.getSign())
+    {
+        std::cout << this->getName() << " executed " << form.getName() << std::endl;
+        form.execute(*this);
+    }
+    else
+        std::cout << this->getName() << " cannot executes " << form.getName() << std::endl;
+}
 std::ostream& operator<<(std::ostream& out ,const Bureaucrat& br)
 {
     out << br.getName() << ",  bureaucrat grade " << br.getGrade() << std::endl;

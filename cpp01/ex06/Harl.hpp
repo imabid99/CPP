@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 18:24:16 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 18:25:39 by imabid           ###   ########.fr       */
+/*   Created: 2022/07/16 13:42:24 by imabid            #+#    #+#             */
+/*   Updated: 2022/07/17 15:36:47 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-#define ROBOTOMYREQUESTFORM_HPP
+#ifndef HARL_HPP
+#define HARL_HPP
 
 #include <iostream>
 
-#include "Form.hpp"
-
-class RobotomyRequestForm : public Form
+class Harl
 {
     private:
-        std::string target;
+    void    debug(); 
+    void    info(); 
+    void    warning(); 
+    void    error();
     public:
-        RobotomyRequestForm();
-        RobotomyRequestForm(std::string Target);
-        RobotomyRequestForm(const RobotomyRequestForm &other);
-	    RobotomyRequestForm &operator=(const RobotomyRequestForm &other);
-        void    execute(Bureaucrat const & executor) const;
-        ~RobotomyRequestForm();
+    Harl();
+    ~Harl();
+    typedef void (Harl::*HARLPTR)();
+    void complain( std::string level );
 };
-
 #endif

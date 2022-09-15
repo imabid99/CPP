@@ -5,27 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 10:37:49 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 19:50:51 by imabid           ###   ########.fr       */
+/*   Created: 2022/07/16 14:31:28 by imabid            #+#    #+#             */
+/*   Updated: 2022/07/18 19:49:26 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "Harl.hpp"
 
-int main(void)
+int main(int ac,char **av)
 {
-	Form imad("imad", 20, 10);
-	Bureaucrat abid("abid", 18);
-    try{
-		imad.beSigned(abid);
-		abid.signForm(imad);
-		std::cout << imad;
-        std::cout << abid;
-	}
-	catch(std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-    abid.signForm(imad);
-	return 0;
+    (void)ac;
+    Harl ha;
+    if(ac != 2)
+        std::cout << "ERROR : Args";
+    else
+        ha.complain(av[1]);
 }
