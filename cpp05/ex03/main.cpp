@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:49 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/16 10:14:03 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/16 10:36:02 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int main()
         Azol->beSigned(imad);
 		imad.signForm(*Azol);
 		imad.executeForm(*Azol);
+        delete Azol;
     }
         catch(std::exception &e) {
 		std::cout << e.what() << std::endl;
@@ -41,6 +42,7 @@ int main()
         Ayour->beSigned(abid);
 	    abid.signForm(*Ayour);
 		abid.executeForm(*Ayour);
+        delete Ayour;
     }
         catch(std::exception &e) {
 		std::cout << e.what() << std::endl;
@@ -54,6 +56,7 @@ int main()
         Tafokt->beSigned(imabid);
 	    imabid.signForm(*Tafokt);
 		imabid.executeForm(*Tafokt);
+        delete Tafokt;
     }
         catch(std::exception &e) {
 		std::cout << e.what() << std::endl;

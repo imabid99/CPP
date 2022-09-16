@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:44 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/16 09:55:12 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/16 10:52:56 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void			Bureaucrat::signForm(Form &f)
     }
     else
     {
-        std::cout << this->name << " couldn't sign  " << f.getName() << "Because grade is not high enough " << std::endl;
+        std::cout << this->name << " couldn't sign  " << f.getName() << " Because grade is not high enough " << std::endl;
     }
 }
 

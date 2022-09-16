@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:49 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/15 10:54:10 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/16 10:36:10 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "PresidentialPardonForm.hpp"
 #include "Form.hpp"
 
-int main(void)
+int main()
 {
 	try
     {
