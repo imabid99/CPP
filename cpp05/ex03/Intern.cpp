@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:54:27 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/15 18:28:05 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/16 09:41:46 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,22 +54,20 @@ Form*    Intern::makeForm(std::string name, std::string target)
         &Intern::makeFormRobotomyRequestForm,
         &Intern::makeFormShrubberyCreationForm,
     };
-    for(i = 0; i < 4; i++)
+    for(i = 0; i < 3; i++)
         if (name.compare(names[i]) == 0)
             break ;
     switch(i)
     {
+        std::cout << i <<std::endl;
         case 0:
-            (this->*(Intern[i]))(target);
-            break ;
+            return (this->*(Intern[i]))(target);
         case 1:
-            (this->*(Intern[i]))(target);
-            break ;
+            return (this->*(Intern[i]))(target);
         case 2:
-            (this->*(Intern[i]))(target);
-            break ;
+            return (this->*(Intern[i]))(target);
         default :
-            std::cout << "[ Probably complaining about insignificant problems ]" << "\n";
+            std::cout << "No Form with this name!!" << std::endl;
     }
     return 0;
 }

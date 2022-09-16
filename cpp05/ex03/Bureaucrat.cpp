@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:44 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/15 18:25:34 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/16 10:10:41 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void			Bureaucrat::signForm(Form &f)
     }
     else
     {
-        std::cout << this->name << " couldn't sign  " << f.getName() << "Because grade is not high enough " << std::endl;
+        std::cout << this->name << " couldn't sign  " << f.getName() << " Because grade is not high enough " << std::endl;
     }
 }
 
@@ -98,6 +98,7 @@ void	Bureaucrat::executeForm(Form const &form)
     else
         std::cout << this->getName() << " cannot executes " << form.getName() << std::endl;
 }
+
 std::ostream& operator<<(std::ostream& out ,const Bureaucrat& br)
 {
     out << br.getName() << ",  bureaucrat grade " << br.getGrade() << std::endl;

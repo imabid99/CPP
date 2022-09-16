@@ -6,13 +6,13 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:03:15 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/15 10:15:55 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/16 09:54:55 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form() : name("test"), sign(false) ,sgrade(150),egrade(150)
+Form::Form() : name(""), sign(false) ,sgrade(150),egrade(150)
 {
 
 }
@@ -24,7 +24,7 @@ Form::Form(std::string Name, int Sgrade, int Egrade) : name(Name) , sign(false) 
         throw Form::GradeTooLowException();
 }
 
-Form::Form(const Form &other) : name(""), sgrade(150),egrade(150)
+Form::Form(const Form &other) : name(""),sign(false), sgrade(150),egrade(150)
 {
      *this = other;
 }

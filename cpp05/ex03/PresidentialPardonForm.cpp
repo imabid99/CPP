@@ -40,5 +40,6 @@ void    PresidentialPardonForm::execute(Bureaucrat const & executor) const
     else 
         throw Form::GradeTooLowException();
 }
+
 PresidentialPardonForm::~PresidentialPardonForm()
 {}
