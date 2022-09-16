@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:49 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/15 10:54:10 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/15 18:52:54 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,53 +15,25 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "Form.hpp"
+#include "Intern.hpp"
 
 int main(void)
 {
-	try
-    {
-        Form *form = new ShrubberyCreationForm("ShrubberyCreationForm");
-        Bureaucrat bureaucrat("imad", 40);
-        form->beSigned(bureaucrat);
-        bureaucrat.signForm(*form);
-        bureaucrat.executeForm(*form);
-        delete form;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-    }
-    
-	std::cout << std::endl;
-    
     try
     {
-        Form *form1 = new RobotomyRequestForm("RRobotomyrequest");
-        Bureaucrat bureaucrat1("abid", 45);
-        form1->beSigned(bureaucrat1);
-        bureaucrat1.signForm(*form1);
-        bureaucrat1.executeForm(*form1);
-        delete form1;
+    	Intern intern1;
+    	Form *rtn;
+
+    	rtn = intern1.makeForm("robotomy request", "mjung");
+    //	rtn = intern1.makeForm("wrongForm", "mjung");
+    	std::cout << rtn->getName() << std::endl;
+    	// std::cout << rtn->getTarget() << std::endl;
+
+    	std::cout << *rtn << std::endl;
     }
-    catch(const std::exception& e)
+    catch (std::exception & e)
     {
-        std::cerr << e.what() << std::endl;
-    }
-    
-	std::cout << std::endl;
-    
-    try
-    {
-        Form *form2 = new PresidentialPardonForm("PresidentialPardon");
-        Bureaucrat bureaucrat2("imabid", 5);
-        form2->beSigned(bureaucrat2);
-        bureaucrat2.signForm(*form2);
-        bureaucrat2.executeForm(*form2);
-        delete form2;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
+    	std::cerr << e.what() << std::endl;
     }
     
     return (0);

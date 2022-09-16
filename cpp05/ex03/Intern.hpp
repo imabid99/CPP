@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:54:24 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/15 17:06:04 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/15 18:20:27 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Intern
         Form*   makeFormRobotomyRequestForm(std::string target);
         Form*   makeFormShrubberyCreationForm(std::string target);
         Form*   makeForm(std::string name, std::string target);
+        typedef Form* (Intern::*INTERNPTR)(std::string target);
         ~Intern();
 };
 

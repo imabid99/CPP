@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:54:27 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/15 17:08:22 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/15 18:28:05 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ Intern::~Intern()
 {
 }
 
-Form::Form(const Form &other)
+Intern::Intern(const Intern &other)
 {
      *this = other;
 }
  
-Form &Form::operator=(const Form &other)
+Intern &Intern::operator=(const Intern &other)
 {
     (void)other;
     return *this;
@@ -45,33 +45,31 @@ Form* Intern::makeFormPresidentialPardonForm(std::string target)
     return new PresidentialPardonForm(target);
 }
 
-Form*    Intern::complain(std::string level)
+Form*    Intern::makeForm(std::string name, std::string target)
 {
     int i = 0;
-    std::string levels[4] = {"DEBUG","INFO","WARNING","ERROR"};
-    InternPTR Intern[4] = {
-        &Intern::debug,
-        &Intern::info,
-        &Intern::warning,
-        &Intern::error
+    std::string names[3] = {"presidential pardon","robotomy request","shrubbery creation"};
+    INTERNPTR Intern[3] = {
+        &Intern::makeFormPresidentialPardonForm,
+        &Intern::makeFormRobotomyRequestForm,
+        &Intern::makeFormShrubberyCreationForm,
     };
     for(i = 0; i < 4; i++)
-        if (level.compare(levels[i]) == 0)
+        if (name.compare(names[i]) == 0)
             break ;
     switch(i)
     {
         case 0:
-            (this->*(Intern[i]))();
-
+            (this->*(Intern[i]))(target);
             break ;
         case 1:
-            (this->*(Intern[i]))();
-
+            (this->*(Intern[i]))(target);
             break ;
         case 2:
-            (this->*(Intern[i]))();
+            (this->*(Intern[i]))(target);
             break ;
         default :
             std::cout << "[ Probably complaining about insignificant problems ]" << "\n";
     }
+    return 0;
 }

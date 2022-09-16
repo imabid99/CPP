@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:44 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/15 15:54:52 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/15 18:24:08 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,8 @@ void	Bureaucrat::executeForm(Form const &form)
 {
     if(form.getSign())
     {
-        std::cout << this->getName() << " executed " << form.getName() << std::endl;
         form.execute(*this);
+        std::cout << this->getName() << " executed " << form.getName() << std::endl;
     }
     else
         std::cout << this->getName() << " cannot executes " << form.getName() << std::endl;
