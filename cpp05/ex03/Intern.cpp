@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:54:27 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/16 09:41:46 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/16 11:08:53 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ Form*    Intern::makeForm(std::string name, std::string target)
             break ;
     switch(i)
     {
-        std::cout << i <<std::endl;
         case 0:
             return (this->*(Intern[i]))(target);
         case 1:
@@ -69,5 +68,6 @@ Form*    Intern::makeForm(std::string name, std::string target)
         default :
             std::cout << "No Form with this name!!" << std::endl;
     }
+    throw Form::GradeTooLowException();
     return 0;
 }

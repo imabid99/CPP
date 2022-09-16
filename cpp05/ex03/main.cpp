@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:49 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/16 10:36:02 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/16 11:07:14 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,20 @@ int main()
 	    imabid.signForm(*Tafokt);
 		imabid.executeForm(*Tafokt);
         delete Tafokt;
+    }
+        catch(std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	try {
+		Bureaucrat hello("hello", 3);
+		
+		Intern form;
+		Form *titrit = form.makeForm("Wrong form", "Titirit");
+        std::cout << titrit->getName() << std::endl;
+        titrit->beSigned(hello);
+	    hello.signForm(*titrit);
+		hello.executeForm(*titrit);
+        delete titrit;
     }
         catch(std::exception &e) {
 		std::cout << e.what() << std::endl;

@@ -21,7 +21,7 @@ WrongCat::WrongCat()
 WrongCat::~WrongCat()
 {
     std::cout << "WrongCat Destructor called" << std::endl;   
-}
+} 
 
 WrongCat::WrongCat(const WrongCat &other)
 {
