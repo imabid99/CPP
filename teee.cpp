@@ -737,8 +737,10 @@
 // int main()  {
 //     TA ta1(30);
 // }
+// }
 
-// ***********************exception************
+
+
 
 #include <iostream>
 #include <stdexcept>
@@ -815,38 +817,114 @@
 //     }
 //     catch ()
 // } 
-#include <fstream>
+// #include <fstream>
+// #include <iostream>
+// int main()
+// {
+//     std::ofstream o;
+//     o.open("o");
+// o << "                                                         .           "    << std::endl;
+// o << "                                              .         ;           "    << std::endl;
+// o << "                 .              .              ;%     ;;               "    << std::endl; 
+// o << "                   ,           ,                :;;%;  %;                "    << std::endl;    
+// o << "                    :         ;                   :;%;'     .,         "    << std::endl; 
+// o << "           ,.        %;     %;            ;        %;'    ,;          "     << std::endl;
+// o << "             ;       ;%;   %;        ,     %;    ;%;    ,%'       "    << std::endl;
+// o << "              %;       ;%; %;      ,  ;       %;  ;%;   ,%;'             "  << std::endl;   
+// o << "               ;%;      %;        ;%;        %; ;%;  ,%;'               "<< std::endl;   
+// o << "                `%;.     ;%;     %;'         `;;%;;%;'                 "<< std::endl;   
+// o << "                 `:;%.    ;;%. %@;        %; ;@%;;%'                   "<< std::endl;
+// o << "                    `:%;.  :;bd%;           %;@%;'         "<< std::endl;
+// o << "                      `@%:.  :;%.         ;@@%;'      "<< std::endl;
+// o << "                        `@%.  `;@%.      ;@@%;             "<< std::endl;
+// o << "                          `@%. `@%;    ;@@%;         "<< std::endl;
+// o << "                            ;@%. :@%;  %@@%;          "<< std::endl;
+// o << "                              %@bd;%;bd%;:;       "<< std::endl;
+// o << "                                #@.##%:;;    "<< std::endl;
+// o << "                                %@@##%::; "<< std::endl;
+// o << "                                %@@@%(o);      . '         "<< std::endl;
+// o << "                                %@@@o%;:(.,'             "<< std::endl;
+// o << "                            `.. %@@@o%::;             "<< std::endl;
+// o << "                               `)@@@o%::;             "<< std::endl;
+// o << "                                %@@(o)::;         "<< std::endl;
+// o << "                               .%@@@@%::;             "<< std::endl;
+// o << "                               ;%@@@@%::;.            "<< std::endl;
+// o << "                              ;%@@@@##:;;;.   "<< std::endl;
+// o << "                          ...;%@@@@@##:;;;;,..        "<< std::endl;
+// }   
+#include <sstream>
+#include <iomanip>
+bool is_int(char *str)
+{
+    int i = 0;
+    while(str[i])
+    {
+        if(!isdigit(str[i]) && str[0] != '-' && str[0] != '+')
+            return false;
+        i++;
+    }
+    return true;
+}
+void    its_int(char *str)
+{
+    std::stringstream in;
+    int n;
+
+    in << str;
+    in >> n;
+
+    std::cout << std::fixed << std::setprecision(1);
+    if(isprint(n))
+        std::cout << "char: " << "'" << static_cast<char>(n) << "'" << std::endl;
+    else
+        std::cout << "char: Non displayable" << std::endl;
+
+    std::cout << "int: " << n << std::endl;
+    std::cout << "float: " << static_cast<float>(n) << 'f' << std::endl;
+    std::cout << "double: " << static_cast<double>(n) << std::endl;
+
+
+}
+// int main(int ac, char **av)
+// {
+//     // int a = av[1]
+//     // std::string in = av[1];
+//     if(ac != 2){
+//         std::cout << "wa chrif" << std::endl;
+//         return 0;
+//     }
+
+//     if(is_int(av[1]))
+//         its_int(av[1]);
+//       int i=0;
+//   char str[]="first line \n second line \n";
+//   while ((str[i]))
+//   {
+//     if(isprint(str[i]))
+//         putchar (str[i]);
+//     i++;
+//   }
+//   return 0;
+//     // if(ac == 2)
+//     // {
+//     //     std::cout << static_cast<int>(in);
+//     // } 
+//     // std::cout << " hello";
+
+// }
+
+#include <string>
 #include <iostream>
 int main()
 {
-    std::ofstream o;
-    o.open("o");
-o << "                                                         .           "    << std::endl;
-o << "                                              .         ;           "    << std::endl;
-o << "                 .              .              ;%     ;;               "    << std::endl; 
-o << "                   ,           ,                :;;%;  %;                "    << std::endl;    
-o << "                    :         ;                   :;%;'     .,         "    << std::endl; 
-o << "           ,.        %;     %;            ;        %;'    ,;          "     << std::endl;
-o << "             ;       ;%;   %;        ,     %;    ;%;    ,%'       "    << std::endl;
-o << "              %;       ;%; %;      ,  ;       %;  ;%;   ,%;'             "  << std::endl;   
-o << "               ;%;      %;        ;%;        %; ;%;  ,%;'               "<< std::endl;   
-o << "                `%;.     ;%;     %;'         `;;%;;%;'                 "<< std::endl;   
-o << "                 `:;%.    ;;%. %@;        %; ;@%;;%'                   "<< std::endl;
-o << "                    `:%;.  :;bd%;          %;@%;'         "<< std::endl;
-o << "                      `@%:.  :;%.         ;@@%;'      "<< std::endl;
-o << "                        `@%.  `;@%.      ;@@%;             "<< std::endl;
-o << "                          `@%. `@%;    ;@@%;         "<< std::endl;
-o << "                            ;@%. :@%;  %@@%;          "<< std::endl;
-o << "                              %@bd;%;bd%;:;       "<< std::endl;
-o << "                                #@.##%:;;    "<< std::endl;
-o << "                                %@@##%::; "<< std::endl;
-o << "                                %@@@%(o);      . '         "<< std::endl;
-o << "                                %@@@o%;:(.,'             "<< std::endl;
-o << "                            `.. %@@@o%::;             "<< std::endl;
-o << "                               `)@@@o%::;             "<< std::endl;
-o << "                                %@@(o)::;         "<< std::endl;
-o << "                               .%@@@@%::;             "<< std::endl;
-o << "                               ;%@@@@%::;.            "<< std::endl;
-o << "                              ;%@@@@##:;;;.   "<< std::endl;
-o << "                          ...;%@@@@@##:;;;;,..        "<< std::endl;
-}   
+    std::string input;
+    std::cin >> input;
+    try{
+        float num = std::stof(input);
+        std::cout << num << std::endl;
+    }
+    catch(const std::exception& e){
+        std::cout << "Invalid input: " << e.what() << '\n';
+        return 1;
+   } 
+}

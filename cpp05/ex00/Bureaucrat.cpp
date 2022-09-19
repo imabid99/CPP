@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:37:44 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/14 16:32:28 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/16 16:21:53 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 #include "Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat() : name("") , grade(20)
-{
+{}
 
-}
 Bureaucrat::Bureaucrat(std::string Name, int Grade) : name(Name) , grade(Grade)
 {
     if(this->grade < 1)
@@ -30,7 +29,7 @@ Bureaucrat::Bureaucrat(std::string Name, int Grade) : name(Name) , grade(Grade)
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other) :name(other.name)
 {
-     *this = other;
+    *this = other;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)

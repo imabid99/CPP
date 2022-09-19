@@ -6,19 +6,14 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:54:27 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/16 11:08:53 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/16 16:23:21 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
 
 Intern::Intern()
-{
-}
-
-Intern::~Intern()
-{
-}
+{}
 
 Intern::Intern(const Intern &other)
 {
@@ -30,6 +25,7 @@ Intern &Intern::operator=(const Intern &other)
     (void)other;
     return *this;
 }
+
 Form* Intern::makeFormShrubberyCreationForm(std::string target)
 {
     return new ShrubberyCreationForm(target);
@@ -71,3 +67,6 @@ Form*    Intern::makeForm(std::string name, std::string target)
     throw Form::GradeTooLowException();
     return 0;
 }
+
+Intern::~Intern()
+{}
