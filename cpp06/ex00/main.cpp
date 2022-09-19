@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:21:05 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/19 15:24:13 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/19 16:00:22 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,15 +98,14 @@ void    its_double(std::string str)
 
 void    its_char(std::string str)
 {
-    double n = std::stod(str);
     std::cout << std::fixed << std::setprecision(1);
-    if(isprint(n))
-        std::cout << "char: " << "'" << static_cast<char>(n) << "'" << std::endl;
+    if(isprint(str[0]))
+        std::cout << "char: " << "'" << str[0] << "'" << std::endl;
     else
         std::cout << "char: Non displayable" << std::endl;
-    std::cout << "int: " << static_cast<int>(n) << std::endl;
-    std::cout << "float: " << static_cast<float>(n) << 'f' << std::endl;
-    std::cout << "double: " << n << std::endl;
+    std::cout << "int: " << static_cast<int>(str[0]) << std::endl;
+    std::cout << "float: " << static_cast<float>(str[0]) << 'f' << std::endl;
+    std::cout << "double: " << static_cast<double>(str[0]) << std::endl;
 }
 
 bool    is_double(std::string str)
@@ -133,16 +132,23 @@ bool    is_double(std::string str)
 
 int main(int ac, char **av)
 {
+    std::string all = av[1];
     if(ac != 2){
         std::cout << "ERROR: ARGS" << std::endl;
         return 0;
     }
-    if(is_int(av[1]))
-        its_int(av[1]);
-    if(is_float(av[1]))
-        its_float(av[1]);
-    if(is_double(av[1]))
-        its_double(av[1]);
-    if(is_char(av[1]))
-        its_char(av[1]);
+    if(is_int(all))
+        its_int(all);
+    else if(is_float(all))
+        its_float(all);
+    else if(is_double(all))
+        its_double(all);
+    else if(all.length() == 1)
+        its_char(all);
+    else if(all == "-inff" || all == "+inff" || all == "nanf")
+        its_pseudof(all);
+    else if(all == "-inf" || all == "+inf" || all == "nan")
+        its_pseudod(all);
+    else
+        std::cout << "ERROR" << std::endl;
 }
