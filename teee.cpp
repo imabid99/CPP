@@ -579,7 +579,6 @@
 //         void    setname(std::string name){
 //             this->name = name;
 //         }
-
 //         void    print()
 //         {
 //             std::cout << this->name << std::endl;
