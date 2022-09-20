@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 19:54:01 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/19 20:10:07 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/20 15:09:53 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,25 +49,32 @@ void identify(Base& p)
 {
 	try{
 		A &a = dynamic_cast<A &>(p);
-		std::cout << "A" << std::endl;
-        delete &a;
+		    std::cout << "A" << std::endl;
+        // delete &a;
+        (void)a;
 	}
 	catch(std::bad_cast &e)
     {
-        std::cout << e.what();
+        std::cout << e.what() << std::endl;
     }
 	try{
 		B &b = dynamic_cast<B &>(p);
 		std::cout << "B" << std::endl;
-        delete &b;
+        // delete &b;
+        (void)b;
 	}
 	catch(const std::exception& e)
-    {}
+    {
+        std::cout << e.what() << std::endl;
+    }
 	try{
 		C &c = dynamic_cast<C &>(p);
 		std::cout << "C" << std::endl;
-        delete &c;
+        // delete &c;
+        (void)c;
 	}
 	catch(const std::exception& e)
-    {}
+    {
+        std::cout << e.what() << std::endl; 
+    }
 }

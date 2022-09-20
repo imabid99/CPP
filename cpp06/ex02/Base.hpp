@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 19:40:08 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/19 20:04:21 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/20 15:06:26 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class Base
 {
     public:
-    virtual ~Base();
+    virtual ~Base() {};
 };
 class A:public Base{};
 class B:public Base{};

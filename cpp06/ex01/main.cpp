@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 18:46:03 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/19 19:33:47 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/20 14:16:59 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ int main()
     data.s = "Ahmed";
     data.n = 50;
     
-    std::cout << "Add " << &data << " Name: " <<  data.s << " Age: " << data.n << std::endl;
+    std::cout << "Name: " <<  data.s << " Age: " << data.n << std::endl;
 
     ptr = serialize(&data);
     Data *newdata = deserialize(ptr);
     
-    std::cout << "Add " << newdata << " Name: " <<  newdata->s << " Age: " << newdata->n << std::endl;
+    std::cout << "Name: " <<  newdata->s << " Age: " << newdata->n << std::endl;
     
     return 0;
 }

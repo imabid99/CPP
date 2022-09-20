@@ -6,13 +6,13 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 18:33:30 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/19 19:15:02 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/20 12:54:31 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Serialization.hpp"
 
-uintptr_t serialize(Data* ptr)
+uintptr_t serialize(Data* ptr) 
 {
     return reinterpret_cast<uintptr_t>(ptr);
 }

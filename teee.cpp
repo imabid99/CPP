@@ -1011,12 +1011,142 @@ void    its_int(char *str)
 //     return 0;
 // }
 
-int main()
-{
-    int *p = new int(60);
-    char *ch = reinterpret_cast<char *>(p);
-    std::cout << *p << std::endl;
-    std::cout << *ch << std::endl;
-    std::cout << p << std::endl;
-    std::cout << &ch << std::endl;
+// int main()
+// {
+//     int *p = new int(60);
+//     char *ch = reinterpret_cast<char *>(p);
+//     std::cout << *p << std::endl;
+//     std::cout << *ch << std::endl;
+//     std::cout << p << std::endl;
+//     std::cout << &ch << std::endl;
+// }
+
+
+// ****************** static_cast ******************
+
+// #include<iostream>
+// using namespace std;
+// class Person {
+// public:
+//     Person(int x)  { cout << "Person::Person(int ) called" << endl;   }
+//     Person()     { cout << "Person::Person() called" << endl;   }
+//     virtual void    print(){cout << "animal" << endl;}
+// };
+ 
+// class Faculty : public Person {
+// public:
+//     Faculty()     { cout << "faculty called" << endl;   }
+//     Faculty(int x):Person(x)   {
+//        cout<<"Faculty::Faculty(int ) called"<< endl;
+//     }
+//     void    print(){cout << "faculty" << endl;}
+//     void    fff(){cout << "im fffff" <<endl;}
+// };
+ 
+// class Student : public Person {
+// public:
+//     Student()     { cout << "student called" << endl;   }
+//     Student(int x):Person(x) {
+//         cout<<"Student::Student(int ) called"<< endl;
+//     }
+//     void    print(){cout << "student" << endl;}
+// };
+ 
+ 
+// int main()  {
+//     Person *a = new Faculty();
+//     a->print();
+//     // a->fff();
+//     Faculty *f = static_cast<Faculty *>(a);
+//     f->fff();
+
+//     // fhad lexemple pointina 3la student ms fach jine 
+//     // ncastiw castina l faculty ohna static_cast aydir liha pass
+//     // 7it 2 object minhiritin mn nafs l class dakchi 3lach aydwzha
+//     // ms had l7ala kat3tabr dangreus 7it t9dar t3tik undefined behavior
+
+//     Person *b = new Student();
+//     Faculty *c = static_cast<Faculty *>(b);
+//     c->print();
+//     c->fff();
+// }
+
+// ****************** dynamic_cast ******************
+
+#include<iostream>
+using namespace std;
+class Person {
+public:
+    Person(int x)  { cout << "Person::Person(int ) called" << endl;   }
+    Person()     { cout << "Person::Person() called" << endl;   }
+    virtual void    print(){cout << "animal" << endl;}
+};
+ 
+class Faculty : public Person {
+public:
+    Faculty()     { cout << "faculty called" << endl;   }
+    Faculty(int x):Person(x)   {
+       cout<<"Faculty::Faculty(int ) called"<< endl;
+    }
+    void    print(){cout << "faculty" << endl;}
+    void    fff(){cout << "im fffff" <<endl;}
+};
+ 
+class Student : public Person {
+public:
+    Student()     { cout << "student called" << endl;   }
+    Student(int x):Person(x) {
+        cout<<"Student::Student(int ) called"<< endl;
+    }
+    void    print(){cout << "student" << endl;}
+};
+ 
+ 
+int main()  {
+    Person *a = new Faculty();
+    a->print();
+    // a->fff();
+    Faculty *f = static_cast<Faculty *>(a);
+    f->fff();
+
+    // fhad lexemple pointina 3la student ms fach jine 
+    // ncastiw castina l faculty ohna static_cast aydir liha pass
+    // 7it 2 object minhiritin mn nafs l class dakchi 3lach aydwzha
+    // ms had l7ala kat3tabr dangreus 7it t9dar t3tik undefined behavior
+
+    Person *b = new Student();
+    Faculty *c = static_cast<Faculty *>(b);
+    c->print();
+    c->fff();
+
+    // upward casting ,
+    Faculty *g = new Faculty();
+    Person *pp = dynamic_cast<Person *>(g);
+    if(pp != NULL)
+    {
+        cout << "dynamic succes upward" << endl;
+        pp->print();
+    }
+    else
+        cout << "dynamic faild  upward" << endl;
+    // down word casting
+    Faculty *p = dynamic_cast<Faculty *>(a);
+    if(p != NULL)
+    {
+        cout << "dynamic succes downcast" << endl;
+        p->print();
+    }
+    else
+        cout << "dynamic faild  downcast" << endl;
+    // wrong downward casting
+    Person * pa = new Student();
+    Faculty *w = dynamic_cast<Faculty *>(pa);
+    if(w != NULL)
+    {
+        cout << "dynamic succes downcast" << endl;
+        w->print();
+    }
+    else
+        cout << "dynamic faild  downcast" << endl;
+
 }

@@ -3,7 +3,7 @@ NAME = dynamic
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INL = Serialization.hpp
+INL = Base.hpp
 
 SRCS = main.cpp \
 	   Base.cpp
