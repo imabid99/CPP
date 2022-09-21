@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:21:05 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/21 10:45:54 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/21 11:11:42 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ bool is_int(std::string str)
     while(str[i])
     {
         if(!isdigit(str[i]) && str[0] != '-' && str[0] != '+')
+            return false;
+        if((str[0] == '-' || str[0] == '+') && !isdigit(str[1]))
             return false;
         i++;
     }
@@ -70,7 +72,9 @@ bool    is_float(std::string str)
     int i = 0;
     while(str[i] != '.')
     {
-        if(!isdigit(str[i]) && str[0] != '-' && str[0] != '+')
+        if(!isdigit(str[i]) && (str[0] != '-' && str[0] != '+' && !isdigit(str[1])))
+            return false;
+        if((str[0] == '-' || str[0] == '+') && !isdigit(str[1]))
             return false;
         i++;
     }
@@ -129,7 +133,9 @@ bool    is_double(std::string str)
     int i = 0;
     while(str[i] != '.')
     {
-        if(!isdigit(str[i]) && str[0] != '-' && str[0] != '+')
+        if(str[0] == '-' && str[0] == '+' && !isdigit(str[1]))
+            return false;
+        if((str[0] == '-' || str[0] == '+') && !isdigit(str[1]))
             return false;
         i++;
     }
@@ -145,8 +151,31 @@ bool    is_double(std::string str)
     }
     return true;
 }
-void    its_pseudo()
+void    its_pseudo(std::string str)
 {
+    if(str == "-inff" || str == "-inf")
+    {
+        std::cout << "char : impossible" << std::endl;
+        std::cout << "int : impossible" << std::endl;
+        std::cout << "float : -inff" << std::endl;
+        std::cout << "double : -inf" << std::endl;
+    }
+    else if(str == "+inff" || str == "+inf")
+    {
+        std::cout << "char : impossible" << std::endl;
+        std::cout << "int : impossible" << std::endl;
+        std::cout << "float : +inff" << std::endl;
+        std::cout << "double : +inf" << std::endl;
+    }
+    else if(str == "nanf" || str == "nan")
+    {
+        std::cout << "char : impossible" << std::endl;
+        std::cout << "int : impossible" << std::endl;
+        std::cout << "float : nanf" << std::endl;
+        std::cout << "double : nan" << std::endl;
+    }
+    else
+        std::cout << "ERROR" << std::endl;
     
 }
 int main(int ac, char **av)
@@ -165,10 +194,7 @@ int main(int ac, char **av)
         its_double(all);
     else if(all.length() == 1)
         its_char(all);
-    // else if(all == "-inff" || all == "+inff" || all == "nanf")
-    //     its_pseudof(all);
-    // else if(all == "-inf" || all == "+inf" || all == "nan")
-    //     its_pseudod(all);
     else
-        std::cout << "ERROR" << std::endl;
+        its_pseudo(all);
+    return 0;
 }
