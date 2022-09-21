@@ -1,4 +1,4 @@
-NAME = Whatever
+NAME = whatever
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
@@ -6,7 +6,7 @@ RM = rm -f
 INL = Whatever.hpp
 
 SRCS = main.cpp \
-	   Whatever.cpp
+	   whatever.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

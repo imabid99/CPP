@@ -6,7 +6,6 @@ RM = rm -f
 INL = iter.hpp
 
 SRCS = main.cpp \
-	   iter.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
