@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:21:05 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/19 16:00:22 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/21 10:45:54 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,15 +46,23 @@ void    its_int(std::string str)
 
 void    its_float(std::string str)
 {
-    float n = std::stof(str);
-    std::cout << std::fixed << std::setprecision(1);
-    if(isprint(n))
-        std::cout << "char: " << "'" << static_cast<char>(n) << "'" << std::endl;
-    else
-        std::cout << "char: Non displayable" << std::endl;
-    std::cout << "int: " << static_cast<int>(n) << std::endl;
-    std::cout << "float: " << n << 'f' << std::endl;
-    std::cout << "double: " << static_cast<double>(n) << std::endl;
+    try
+    {
+        float n = std::stof(str);
+        std::cout << std::fixed << std::setprecision(1);
+        if(isprint(n))
+            std::cout << "char: " << "'" << static_cast<char>(n) << "'" << std::endl;
+        else
+            std::cout << "char: Non displayable" << std::endl;
+        std::cout << "int: " << static_cast<int>(n) << std::endl;
+        std::cout << "float: " << n << 'f' << std::endl;
+        std::cout << "double: " << static_cast<double>(n) << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 }
 
 bool    is_float(std::string str)
@@ -85,15 +93,23 @@ bool    is_float(std::string str)
 
 void    its_double(std::string str)
 {
-    double n = std::stod(str);
-    std::cout << std::fixed << std::setprecision(1);
-    if(isprint(n))
-        std::cout << "char: " << "'" << static_cast<char>(n) << "'" << std::endl;
-    else
-        std::cout << "char: Non displayable" << std::endl;
-    std::cout << "int: " << static_cast<int>(n) << std::endl;
-    std::cout << "float: " << static_cast<float>(n) << 'f' << std::endl;
-    std::cout << "double: " << n << std::endl;
+    try
+    {
+        double n = std::stod(str);
+        std::cout << std::fixed << std::setprecision(1);
+        if(isprint(n))
+            std::cout << "char: " << "'" << static_cast<char>(n) << "'" << std::endl;
+        else
+            std::cout << "char: Non displayable" << std::endl;
+        std::cout << "int: " << static_cast<int>(n) << std::endl;
+        std::cout << "float: " << static_cast<float>(n) << 'f' << std::endl;
+        std::cout << "double: " << n << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 }
 
 void    its_char(std::string str)
@@ -129,14 +145,18 @@ bool    is_double(std::string str)
     }
     return true;
 }
-
+void    its_pseudo()
+{
+    
+}
 int main(int ac, char **av)
 {
-    std::string all = av[1];
+    std::string all;
     if(ac != 2){
         std::cout << "ERROR: ARGS" << std::endl;
         return 0;
     }
+    all = av[1];
     if(is_int(all))
         its_int(all);
     else if(is_float(all))
@@ -145,10 +165,10 @@ int main(int ac, char **av)
         its_double(all);
     else if(all.length() == 1)
         its_char(all);
-    else if(all == "-inff" || all == "+inff" || all == "nanf")
-        its_pseudof(all);
-    else if(all == "-inf" || all == "+inf" || all == "nan")
-        its_pseudod(all);
+    // else if(all == "-inff" || all == "+inff" || all == "nanf")
+    //     its_pseudof(all);
+    // else if(all == "-inf" || all == "+inf" || all == "nan")
+    //     its_pseudod(all);
     else
         std::cout << "ERROR" << std::endl;
 }

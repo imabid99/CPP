@@ -3,7 +3,6 @@ NAME = Static
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
-INL = convert.hpp
 
 SRCS = main.cpp \
 
