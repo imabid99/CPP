@@ -1072,24 +1072,6 @@ void    its_int(char *str)
 // }
 
 // ****************** dynamic_cast ******************
-// void    print(int const &x)
-// {
-//     std::cout << x << "\t";
-// }
-
-// void    print(char const &x)
-// {
-//     std::cout << x;
-// }
-
-// int main( void ) {
-//     int a[5] = {0,1,2,3,4};
-//     char    arr[] = "hello";
-    
-//     ::iter<int>(a, 5, &print);
-//     ::iter<char>(arr, 6, &print);
-//     return 0;
-// }
 #include<iostream>
 using namespace std;
 class Person {
