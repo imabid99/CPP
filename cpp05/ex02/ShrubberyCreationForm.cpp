@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 18:24:21 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/21 14:16:43 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/21 14:18:39 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,7 @@ void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
         outfile <<      "                               .%@@@@%::;             "                         << std::endl;
         outfile <<      "                               ;%@@@@%::;.            "                         << std::endl;
         outfile <<      "                              ;%@@@@##:;;;.   "                                 << std::endl;
-        outfile <<      "                          ...;%@@@@@##:;;;;,..        "                         << std::endl;
-        
+        outfile <<      "                          ...;%@@@@@##:;;;;,..        "                         << std::endl;    
     }
     else 
         throw Form::GradeTooLowException();
