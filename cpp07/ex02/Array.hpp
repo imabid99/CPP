@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:20:32 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/22 13:18:47 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/22 13:28:02 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,25 @@ class Array
         T *arr;
         unsigned int length;
     public:
-    Array() : arr(0), n(0);
+    Array() : arr(0), length(0)
+    {}
     Array(unsigned int n)
     {
         this->length = n;
         arr = new T[n];
     };
+    Array(const Array &other)
+    {
+        *this = other;
+    };
     Array &operator=(Array const &other)
     {
 	    if (this != &other)
 	    {
-	    	this->_len = other._len;
-	    	this->_arr = new T[other.length];
-	    	for (int i = 0; i < length; i++)
-	    		this->_arr[i] = other._arr[i];
+	    	this->length = other.length;
+	    	this->arr = new T[other.length];
+	    	for (unsigned int i = 0; i < length; i++)
+	    		this->arr[i] = other.arr[i];
 	    }
 	    return (*this);
 	};
@@ -47,7 +52,7 @@ class Array
         else
             return this->arr[ind];
     }
-    int const size() const
+    unsigned int size() const
     {
         return this->length;
     }

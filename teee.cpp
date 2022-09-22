@@ -1021,7 +1021,6 @@ void    its_int(char *str)
 //     std::cout << &ch << std::endl;
 // }
 
-
 // ****************** static_cast ******************
 
 // #include<iostream>

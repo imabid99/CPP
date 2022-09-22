@@ -6,7 +6,6 @@ RM = rm -f
 INL = Array.hpp
 
 SRCS = main.cpp \
-	   Array.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
