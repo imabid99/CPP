@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:20:32 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/22 13:28:02 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/22 17:27:47 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Array
     Array(unsigned int n)
     {
         this->length = n;
-        arr = new T[n];
+        this->arr = new T[n];
     };
     Array(const Array &other)
     {

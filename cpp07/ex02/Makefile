@@ -1,11 +1,11 @@
-NAME = Array
+NAME = array
 
 CC = c++
 CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
 INL = Array.hpp
 
-SRCS = main.cpp \
+SRCS = main.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 

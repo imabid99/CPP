@@ -5,8 +5,7 @@ CC_FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -f
 INL = Whatever.hpp
 
-SRCS = main.cpp \
-	   whatever.cpp
+SRCS = main.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 

@@ -6,12 +6,13 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:20:35 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/22 13:29:05 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/22 17:35:30 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 #define MAX_VAL 750
+
 int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
@@ -58,6 +59,7 @@ int main(int, char**)
     {
         numbers[i] = rand();
     }
+    
     delete [] mirror;//
     return 0;
 }
