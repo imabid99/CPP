@@ -366,7 +366,6 @@
 // }
 
 
-
 // class Hello{
 //     private:
 //         int i;
@@ -1071,80 +1070,141 @@ void    its_int(char *str)
 // }
 
 // ****************** dynamic_cast ******************
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+// class Person {
+// public:
+//     Person(int x)  { cout << "Person::Person(int ) called" << endl;   }
+//     Person()     { cout << "Person::Person() called" << endl;   }
+//     virtual void    print(){cout << "animal" << endl;}
+// };
+ 
+// class Faculty : public Person {
+// public:
+//     Faculty()     { cout << "faculty called" << endl;   }
+//     Faculty(int x):Person(x)   {
+//        cout<<"Faculty::Faculty(int ) called"<< endl;
+//     }
+//     void    print(){cout << "faculty" << endl;}
+//     void    fff(){cout << "im fffff" <<endl;}
+// };
+ 
+// class Student : public Person {
+// public:
+//     Student()     { cout << "student called" << endl;   }
+//     Student(int x):Person(x) {
+//         cout<<"Student::Student(int ) called"<< endl;
+//     }
+//     void    print(){cout << "student" << endl;}
+// };
+ 
+ 
+// int main()  {
+//     Person *a = new Faculty();
+//     a->print();
+//     // a->fff();
+//     Faculty *f = static_cast<Faculty *>(a);
+//     f->fff();
+
+//     // fhad lexemple pointina 3la student ms fach jine 
+//     // ncastiw castina l faculty ohna static_cast aydir liha pass
+//     // 7it 2 object minhiritin mn nafs l class dakchi 3lach aydwzha
+//     // ms had l7ala kat3tabr dangreus 7it t9dar t3tik undefined behavior
+
+//     Person *b = new Student();
+//     Faculty *c = static_cast<Faculty *>(b);
+//     c->print();
+//     c->fff();
+
+//     // upward casting ,
+//     Faculty *g = new Faculty();
+//     Person *pp = dynamic_cast<Person *>(g);
+//     if(pp != NULL)
+//     {
+//         cout << "dynamic succes upward" << endl;
+//         pp->print();
+//     }
+//     else
+//         cout << "dynamic faild  upward" << endl;
+//     // down word casting
+//     Faculty *p = dynamic_cast<Faculty *>(a);
+//     if(p != NULL)
+//     {
+//         cout << "dynamic succes downcast" << endl;
+//         p->print();
+//     }
+//     else
+//         cout << "dynamic faild  downcast" << endl;
+//     // wrong downward casting
+//     Person * pa = new Student();
+//     Faculty *w = dynamic_cast<Faculty *>(pa);
+//     if(w != NULL)
+//     {
+//         cout << "dynamic succes downcast" << endl;
+//         w->print();
+//     }
+//     else
+//         cout << "dynamic faild  downcast" << endl;
+
+// }
+
+
+// ************************** STL **************************
+
+
+
+#include <iostream>
+#include <vector>
 using namespace std;
-class Person {
-public:
-    Person(int x)  { cout << "Person::Person(int ) called" << endl;   }
-    Person()     { cout << "Person::Person() called" << endl;   }
-    virtual void    print(){cout << "animal" << endl;}
-};
  
-class Faculty : public Person {
-public:
-    Faculty()     { cout << "faculty called" << endl;   }
-    Faculty(int x):Person(x)   {
-       cout<<"Faculty::Faculty(int ) called"<< endl;
-    }
-    void    print(){cout << "faculty" << endl;}
-    void    fff(){cout << "im fffff" <<endl;}
-};
- 
-class Student : public Person {
-public:
-    Student()     { cout << "student called" << endl;   }
-    Student(int x):Person(x) {
-        cout<<"Student::Student(int ) called"<< endl;
-    }
-    void    print(){cout << "student" << endl;}
-};
- 
- 
-int main()  {
-    Person *a = new Faculty();
-    a->print();
-    // a->fff();
-    Faculty *f = static_cast<Faculty *>(a);
-    f->fff();
+int main() {
 
-    // fhad lexemple pointina 3la student ms fach jine 
-    // ncastiw castina l faculty ohna static_cast aydir liha pass
-    // 7it 2 object minhiritin mn nafs l class dakchi 3lach aydwzha
-    // ms had l7ala kat3tabr dangreus 7it t9dar t3tik undefined behavior
+   // create a vector to store int
+   vector<int> vec; 
+   vector<int> vec1; 
+   int i;
+    vector<int>::iterator ptr;
+   // display the original size of vec
+   cout << "vector size = " << vec.size() << endl;
 
-    Person *b = new Student();
-    Faculty *c = static_cast<Faculty *>(b);
-    c->print();
-    c->fff();
+   // push 5 values into the vector
+   for(i = 0; i < 5; i++) {
+      vec.push_back(i);
+   }
+   for(i = 8; i < 11; i++) {
+      vec1.push_back(i);
+   }
+   // display extended size of vec
+   cout << "extended vector size = " << vec.size() << endl;
+    // copying 1 vector elements in other using inserter()
+    // inserts ar1 after 3rd position in ar
+    copy(vec1.begin(), vec1.end(), inserter(vec1,ptr));
+    // Displaying new vector elements
+    cout << "The new vector after inserting elements is : ";
+    for (int &x : vec) 
+        cout << x << " ";
 
-    // upward casting ,
-    Faculty *g = new Faculty();
-    Person *pp = dynamic_cast<Person *>(g);
-    if(pp != NULL)
-    {
-        cout << "dynamic succes upward" << endl;
-        pp->print();
-    }
-    else
-        cout << "dynamic faild  upward" << endl;
-    // down word casting
-    Faculty *p = dynamic_cast<Faculty *>(a);
-    if(p != NULL)
-    {
-        cout << "dynamic succes downcast" << endl;
-        p->print();
-    }
-    else
-        cout << "dynamic faild  downcast" << endl;
-    // wrong downward casting
-    Person * pa = new Student();
-    Faculty *w = dynamic_cast<Faculty *>(pa);
-    if(w != NULL)
-    {
-        cout << "dynamic succes downcast" << endl;
-        w->print();
-    }
-    else
-        cout << "dynamic faild  downcast" << endl;
 
+    ptr = vec.begin();
+    // advance increment the iterator position till the sppecified number mentioned
+    advance(ptr,2);
+    std::cout << "advance = " << *ptr << std::endl;
+//    access 5 values from the vector
+   for(i = 0; i < 5; i++) {
+      cout << "value of vec [" << i << "] = " << vec[i] << endl;
+   }
+//     vector<int>::iterator ptr;
+//     vector<int>::iterator a;
+//     ptr = vec.end();
+//     a = vec.begin();
+//     std::cout << "end = " << *ptr << std::endl;
+//     std::cout << *a << std::endl;
+//    // use iterator to access the values
+//    vector<int>::iterator v = vec.begin();
+//    while( v != vec.end()) {
+//       cout << "value of v = " << *v << endl;
+//       v++;
+//    }
+
+   return 0;
 }
