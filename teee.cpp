@@ -366,6 +366,9 @@
 // }
 
 
+// #endif /* EASYFIND_HPP */
+
+
 // class Hello{
 //     private:
 //         int i;
@@ -1147,7 +1150,6 @@ void    its_int(char *str)
 //         cout << "dynamic faild  downcast" << endl;
 
 // }
-
 
 // ************************** STL **************************
 

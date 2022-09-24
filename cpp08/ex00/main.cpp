@@ -6,13 +6,20 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 10:17:55 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/23 12:02:55 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/23 15:16:36 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
 
+
+
 int main()
 {
-    
+    std::vector<int> vec;
+
+    for(int i = 0; i < 5; i++) {
+      vec.push_back(i);
+    }
+    easyfind(vec , 10);
 }
