@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 09:36:26 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/27 16:47:17 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/27 16:57:14 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int main()
 {
+        Span sp = Span(5);
     try
     {
-        Span sp = Span(5);
         sp.addNumber(80);
         sp.addNumber(40);
         sp.addNumber(50);
@@ -31,25 +31,26 @@ int main()
         std::cerr << e.what() << '\n';
     }
     
-    std::vector<int> v(2);
-    v.push_back(20);
-    v.push_back(30);
-    for (size_t i = 0; i < v.size(); i++)
-    {
-        std::cout << v[i] << " " << std::endl;
-    }
-    std::cout  << std::endl;
+    // std::vector<int> v(2);
+    // v.push_back(20);
+    // v.push_back(30);
+    // for (size_t i = 0; i < v.size(); i++)
+    // {
+    //     std::cout << v[i] << " " << std::endl;
+    // }
+    // std::cout  << std::endl;
     std::vector<int> vec;
     vec.push_back(10);
     vec.push_back(70);
     vec.push_back(90);
-    vec.insert(vec.end(),v.begin(),v.end());
-    std::sort(vec.begin(),vec.end());
-    std::vector<int>::iterator it = vec.begin();
-    for (; it != vec.end(); it++)
-    {
-        std::cout << *it << " " << std::endl;
-    }
+    sp.addNumber(vec.begin(),vec.end());
+    // vec.insert(vec.end(),v.begin(),v.end());
+    // std::sort(vec.begin(),vec.end());
+    // std::vector<int>::iterator it = vec.begin();
+    // for (; it != vec.end(); it++)
+    // {
+    //     std::cout << *it << " " << std::endl;
+    // }
     
     
     return 0;
