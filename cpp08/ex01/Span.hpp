@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 12:02:58 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/27 13:02:20 by imabid           ###   ########.fr       */
+/*   Created: 2022/09/26 17:37:04 by imabid            #+#    #+#             */
+/*   Updated: 2022/09/27 09:41:43 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EASYFIND_HPP
-#define EASYFIND_HPP
+#ifndef SPAN_HPP
+#define SPAN_HPP
 
 #include <iostream>
-#include <algorithm>
-#include <string>
 #include <vector>
+#include <algorithm>
 
-template < typename T >
-int easyfind(T &vec, int nb)
+class Span
 {
-    std::vector<int>::iterator pos;
-    pos = std::find(vec.begin(), vec.end(), nb);
-    if(pos != vec.end())
-        return 1;
-    else
-        return -1;
-}
+    private:
+        std::vector<int> vec;
+        unsigned int nb;
+    public:
+        Span();
+        Span(unsigned int n);
+        Span(const Span &other);
+        Span &operator=(Span const &other);
+        int  &operator[](unsigned int ind);
+        void    addNumber(int nB);
+        int    shortestSpan();
+        int    longestSpan();
+        ~Span();
+};
 
 #endif

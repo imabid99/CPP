@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 10:17:55 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/23 15:16:36 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/27 13:03:21 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,14 @@
 int main()
 {
     std::vector<int> vec;
-
-    for(int i = 0; i < 5; i++) {
-      vec.push_back(i);
-    }
-    easyfind(vec , 10);
+    int nb = 8;
+    vec.push_back(2);
+    vec.push_back(10);
+    vec.push_back(8);
+    vec.push_back(100);
+    vec.push_back(30);
+    if(easyfind(vec , nb) != -1)
+      std::cout << "The number " << nb << " is found" << std::endl;
+    else
+      std::cout << "The number is not found" << std::endl;
 }
