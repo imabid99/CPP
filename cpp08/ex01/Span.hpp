@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 17:37:04 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/27 16:58:08 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/28 10:56:58 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,27 +32,19 @@ class Span
         template <typename T>
         void    addNumber(T ibegin, T iend)
         {
-            // khss chi 7ajja hna
+            if(std::distance(ibegin,iend) + vec.size() > this->nb)
+                throw Fullvec();
             vec.insert(vec.end(), ibegin, iend);
         }
         class	NoSpace: public std::exception{
-		    const char * what () const throw ()
-		    {
-		    	return "No space left";
-		    }
+		    const char * what () const throw ();
 		};
         class	noSpan: public std::exception{
-		    const char * what () const throw ()
-		    {
-		    	return "No span";
-		    }
+		    const char * what () const throw ();
 		};
-        // class	NoSpace: public std::exception{
-		//     const char * what () const throw ()
-		//     {
-		//     	return "No space left";
-		//     }
-		// };
+        class	Fullvec: public std::exception{
+		    const char * what () const throw ();
+		};
         int    shortestSpan();
         int    longestSpan();
         ~Span();
