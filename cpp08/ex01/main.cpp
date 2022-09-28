@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 09:36:26 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/28 13:50:17 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/28 18:26:43 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int main()
     {
         sp.addNumber(80);
         sp.addNumber(20);
-        // sp.addNumber(50);
-        // sp.addNumber(55);
-        // sp.addNumber(62);
+        sp.addNumber(50);
+        sp.addNumber(55);
+        sp.addNumber(62);
     
         std::cout << sp.shortestSpan() << std::endl;
         std::cout << sp.longestSpan() << std::endl;

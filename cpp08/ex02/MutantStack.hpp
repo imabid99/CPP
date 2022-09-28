@@ -6,7 +6,7 @@
 /*   By: imabid <imabid@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:01:21 by imabid            #+#    #+#             */
-/*   Updated: 2022/09/28 16:40:57 by imabid           ###   ########.fr       */
+/*   Updated: 2022/09/28 18:21:35 by imabid           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 #include <vector>
 
 template <typename T>
-class MutantStack : std::stack<T>
+class MutantStack : public std::stack<T>
 {
     public:
     MutantStack(){};
@@ -52,12 +52,12 @@ class MutantStack : std::stack<T>
         return this->c.end();
     };
     
-    const_iterator  begin() const {
-        return this->c.begin();
+    const_iterator  cbegin() const {
+        return this->c.cbegin();
     }
     
-    const_iterator  end() const {
-        return this->c.end();
+    const_iterator  cend() const {
+        return this->c.cend();
     }
     reverse_iterator    rbegin() 
     {
@@ -67,13 +67,14 @@ class MutantStack : std::stack<T>
     {
         return this->c.rend();
     };
-    const_reverse_iterator    rbegin() 
+    
+    const_reverse_iterator    crbegin() 
     {
-        return this->c.rbegin();
+        return this->c.crbegin();
     };
-    const_reverse_iterator    rend() 
+    const_reverse_iterator    crend() 
     {
-        return this->c.rend();
+        return this->c.crend();
     };
     ~MutantStack(){};
 };
